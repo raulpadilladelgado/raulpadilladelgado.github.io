@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    background-image: url(796832.jpg);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.person-name {
+    font-size: 3rem;
+}
+
+img.logo {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 20rem;
+}
+
+img.blog {
+    height: 4rem;
+    width: 4rem;
+}
+
+img.blog:hover {
+    height: 5rem;
+    width: 5rem;
+}
+
+img.arrow {
+    height: 2rem;
+    width: 2rem;
+    transition: 1s;
+}
+
+img.arrow.toggle {
+    height: 3rem;
+    width: 3rem;
+    transition: 1s;
+}
+
+span {
+    font-weight: bold;
+}
+
+p.person-name {
+    font-family: "MV Boli";
+    color: white;
+}

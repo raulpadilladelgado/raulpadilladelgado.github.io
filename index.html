@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Raúl Padilla Delgado</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="container">
+    <div>
+        <img src="Raul.jpg" class="logo" alt="An Image about me">
+    </div>
+    <p class="person-name"><span>R</span>aúl <span>P</span>adilla <span>D</span>elgado</p>
+    <div>
+        <img src="arrow-down-sign-to-navigate.png" class="arrow" alt="">
+    </div>
+    <br>
+    <br>
+    <div>
+        <a href="https://raulpadilladelgado.github.io/blog/">
+            <img src="blog.png" class="blog" alt="">
+        </a>
+    </div>
+</div>
+<script>
+    const arrow = document.getElementsByClassName("arrow")[0];
+
+    setInterval(toggleArrow,1300);
+
+    function toggleArrow() {
+        if (arrow.className === "arrow") {
+            arrow.className = "arrow toggle"
+        } else {
+            arrow.className = "arrow"
+
+        }
+
+    }
+</script>
+</body>
+</html>
