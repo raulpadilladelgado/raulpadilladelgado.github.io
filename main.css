@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    background-image: url(796832.jpg);
 }
 
 * {
@@ -19,42 +18,53 @@ body {
 }
 
 .person-name {
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 img.logo {
-    height: 10rem;
-    width: 10rem;
+    height: 12rem;
+    width: 14rem;
     border-radius: 20rem;
 }
 
 img.blog {
-    height: 4rem;
-    width: 4rem;
-}
-
-img.blog:hover {
     height: 5rem;
     width: 5rem;
 }
 
-img.arrow {
-    height: 2rem;
-    width: 2rem;
-    transition: 1s;
+img.blog:hover {
+    height: 6rem;
+    width: 6rem;
 }
 
-img.arrow.toggle {
+img.arrow {
     height: 3rem;
     width: 3rem;
     transition: 1s;
+    margin: 2rem;
 }
 
-span {
+img.arrow.toggle {
+    height: 4rem;
+    width: 4rem;
+    transition: 1s;
+}
+
+span.title {
     font-weight: bold;
+    font-size: 3.5rem;
+}
+
+span.subtitle {
+    font-size: 2.5rem;
 }
 
 p.person-name {
-    font-family: "MV Boli";
-    color: white;
+    font-family: "MV Boli", serif;
+    color: black;
+}
+
+.link-icons{
+    display: flex;
+    justify-content: space-around;
 }

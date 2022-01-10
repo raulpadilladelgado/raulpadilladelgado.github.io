@@ -4,28 +4,43 @@
     <meta charset="UTF-8">
     <title>Raúl Padilla Delgado</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/yo.jpg" type="image/x-icon">
 </head>
 <body>
 <div class="container">
     <div>
-        <img src="Raul.jpg" class="logo" alt="An Image about me">
+        <img src="images/yo.jpg" class="logo" alt="An Image about me">
     </div>
-    <p class="person-name"><span>R</span>aúl <span>P</span>adilla <span>D</span>elgado</p>
+    <span class="title">
+        <span>R</span>aúl
+        <span>P</span>adilla
+        <span>D</span>elgado
+    </span>
+    <span class="subtitle">
+    Software Developer
+    </span>
     <div>
-        <img src="arrow-down-sign-to-navigate.png" class="arrow" alt="">
+        <img src="images/arrow-down-sign-to-navigate.png" class="arrow" alt="">
     </div>
-    <br>
-    <br>
-    <div>
+    <div class="link-icons">
         <a href="https://raulpadilladelgado.github.io/blog/">
-            <img src="blog.png" class="blog" alt="">
+            <img src="images/blog.png" class="blog" alt="">
+        </a>
+        <a href="https://github.com/raulpadilladelgado">
+            <img src="images/github-octocat.png" class="blog" alt="">
+        </a>
+        <a href="https://www.linkedin.com/in/raulpadilladelgado/">
+            <img src="images/linkedin-icon.png" class="blog" alt="">
+        </a>
+        <a href="mailto:padilladelgadoraul@gmail.com">
+            <img src="images/google-gmail.png" class="blog" alt="">
         </a>
     </div>
 </div>
 <script>
     const arrow = document.getElementsByClassName("arrow")[0];
 
-    setInterval(toggleArrow,1300);
+    setInterval(toggleArrow, 1300);
 
     function toggleArrow() {
         if (arrow.className === "arrow") {
