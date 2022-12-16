@@ -22,9 +22,8 @@ body {
 }
 
 img.logo {
-    height: 12rem;
+    height: 14rem;
     width: 14rem;
-    border-radius: 20rem;
 }
 
 img.blog {
@@ -56,7 +55,7 @@ span.title {
 }
 
 span.subtitle {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
 }
 
 p.person-name {
