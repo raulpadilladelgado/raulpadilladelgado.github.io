@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Raúl Padilla Delgado</title>
+    <title>Raúl Padilla</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/yo.png" type="image/x-icon">
 </head>
@@ -12,7 +12,7 @@
     <div class="header-controls">
         <button id="langToggle" class="lang-toggle" aria-label="Cambiar idioma">ES/EN</button>
         <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" aria-pressed="false">
-            <!-- Sun icon -->
+            
             <svg class="icon icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
                 <circle cx="12" cy="12" r="4" fill="currentColor" />
                 <g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none">
@@ -26,7 +26,7 @@
                     <line x1="18.4" y1="5.6" x2="19.8" y2="4.2" />
                 </g>
             </svg>
-            <!-- Moon icon -->
+            
             <svg class="icon icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
                 <path fill="currentColor" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
             </svg>
@@ -38,7 +38,6 @@
 </header>
 
 <main class="container card">
-    <!-- removed explore button as requested -->
 
     <section class="links">
         <h2 data-i18n="projects">Proyectos</h2>
@@ -59,7 +58,7 @@
 
             <div class="link-item" data-info="github">
                 <a class="link-link" href="https://github.com/raulpadilladelgado">
-                    <!-- inline GitHub mark SVG (no background) -->
+                    
                     <svg class="icon svg-icon" viewBox="0 0 24 24" width="52" height="52" aria-hidden="true" focusable="false">
                         <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11.04 11.04 0 012.9-.39c.98.01 1.97.13 2.9.39 2.2-1.5 3.17-1.18 3.17-1.18.62 1.57.24 2.73.12 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.68.41.35.78 1.04.78 2.1 0 1.52-.01 2.75-.01 3.13 0 .3.2.66.79.55C20.71 21.38 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/>
                     </svg>
@@ -107,7 +106,7 @@
         <div class="link-icons contact">
             <div class="link-item" data-info="email">
                 <a class="link-link" href="mailto:padilladelgadoraul@gmail.com">
-                    <!-- elegant envelope icon (stroke) -->
+                    
                     <svg class="icon svg-icon" viewBox="0 0 24 24" width="52" height="52" aria-hidden="true" focusable="false">
                         <rect x="2.5" y="5.5" width="19" height="13" rx="2.2" ry="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
                         <path d="M3.5 6.5l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -157,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function(){
             info: {
                 blog: "Latest posts, technical notes and tutorials.",
                 github: "Code repositories, contributions and sample projects.",
-                bot: "Telegram bot I maintain: small utilities and integrations.",
+                bot: "Telegram bot I maintain: find nearest cheapest gas stations.",
                 actions: "Automation examples and CI integrations I've published.",
                 email: "Send me a message — I reply to collaboration and questions.",
                 linkedin: "Professional profile and experiences."
@@ -177,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function(){
             info: {
                 blog: "Entradas recientes, apuntes técnicos y tutoriales.",
                 github: "Repositorios de código, contribuciones y proyectos de ejemplo.",
-                bot: "Bot de Telegram que mantengo: utilidades e integraciones.",
+                bot: "Bot de Telegram que mantengo: encuentra gasolineras baratas cercanas.",
                 actions: "Ejemplos de automatización e integraciones CI que publiqué.",
                 email: "Mándame un mensaje — contesto para colaboraciones y dudas.",
                 linkedin: "Perfil profesional y experiencia."
@@ -185,15 +184,13 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     };
 
-    /* Theme handling: no persistence. Default follows system; toggle applies a session-only override */
-    let themeOverride = null; // 'light' | 'dark' | null (auto)
+    let themeOverride = null;
 
     function systemPrefersDark(){
         return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
 
     function applyTheme(pref){
-        // pref: 'dark' | 'light' | null (auto)
         let useDark;
         if(pref === 'dark') useDark = true;
         else if(pref === 'light') useDark = false;
@@ -201,15 +198,12 @@ document.addEventListener('DOMContentLoaded', function(){
         document.documentElement.classList.toggle('dark', useDark);
         updateThemeButton(useDark);
     }
-    // theme toggle element (ensure available before applying theme)
     const themeToggle = document.getElementById('themeToggle');
 
-    // initialize theme (auto)
     themeOverride = null;
     applyTheme(themeOverride);
     console.log('[init] theme applied (auto, no persistence)');
 
-    // listen to system changes only when no session override is active
     const mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
     if(mq){
         mq.addEventListener && mq.addEventListener('change', ()=>{
@@ -218,24 +212,18 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function updateThemeButton(isDark){
-    // themeToggle may be null if element is missing; try to query lazily
     const btn = themeToggle || document.getElementById('themeToggle');
     if(!btn) return;
     btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    btn.title = isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
     btn.classList.toggle('is-dark', isDark);
     }
 
     if(themeToggle){
         themeToggle.addEventListener('click', ()=>{
-            // compute current effective mode
             const effectiveDark = document.documentElement.classList.contains('dark');
             themeOverride = effectiveDark ? 'light' : 'dark';
-            // add a rotating class for micro-animation
             themeToggle.classList.add('rotating');
-            // apply theme (this will update button state via updateThemeButton)
             applyTheme(themeOverride);
-            // remove rotating after animation ends (safe timeout)
             setTimeout(()=> themeToggle.classList.remove('rotating'), 420);
         });
     }
@@ -262,14 +250,12 @@ document.addEventListener('DOMContentLoaded', function(){
             currentLang = currentLang === 'en' ? 'es' : 'en';
             applyTranslations(currentLang);
             langToggle.textContent = currentLang.toUpperCase();
-            // refresh info-cards content after language change
             populateInfoCards();
         });
         langToggle.textContent = currentLang.toUpperCase();
     }
     console.log('[init] langToggle, themeToggle elements:', !!langToggle, !!themeToggle);
 
-    /* Info cards: populate and interactivity */
     function getInfoText(key){
         try{ return translations[currentLang].info[key] || ''; }catch(e){return ''}
     }
@@ -286,7 +272,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     populateInfoCards();
 
-    // Desktop hover: show card on mouseenter, hide on mouseleave
     document.querySelectorAll('.link-item').forEach(item=>{
         const card = item.querySelector('.info-card');
         const toggle = item.querySelector('.info-toggle');
@@ -300,7 +285,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 card.classList.remove('visible'); card.setAttribute('aria-hidden','true');
             }
         });
-        // mobile: toggle via button
         if(toggle){
             const closeAllInfoCards = ()=>{
                 document.querySelectorAll('.link-item').forEach(otherItem=>{
@@ -319,7 +303,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 e.preventDefault(); e.stopPropagation();
                 const expanded = toggle.getAttribute('aria-expanded') === 'true';
                 if(!expanded){
-                    // close others then open
                     closeAllInfoCards();
                     toggle.setAttribute('aria-expanded','true');
                     card.classList.add('visible');
@@ -331,7 +314,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             });
 
-            // close when clicking outside any .link-item (mobile and desktop)
             document.addEventListener('click', (ev)=>{
                 if(!ev.target.closest('.link-item')){
                     closeAllInfoCards();
@@ -340,7 +322,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 
-    // cleanup any leftover sheet elements on init
     document.querySelectorAll('.info-card.sheet .sheet-close').forEach(n=>n.remove());
     document.querySelectorAll('.info-card.sheet').forEach(n=>n.classList.remove('sheet'));
 });
