@@ -3,356 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Raúl Padilla</title>
+    <title>Raúl Padilla | Software Developer</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="images/yo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header class="header">
-    <div class="header-controls">
-        <button id="langToggle" class="lang-toggle" aria-label="Cambiar idioma">ES/EN</button>
-        <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" aria-pressed="false">
-            
-            <svg class="icon icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                <circle cx="12" cy="12" r="4" fill="currentColor" />
-                <g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none">
-                    <line x1="12" y1="1" x2="12" y2="3" />
-                    <line x1="12" y1="21" x2="12" y2="23" />
-                    <line x1="4.2" y1="4.2" x2="5.6" y2="5.6" />
-                    <line x1="18.4" y1="18.4" x2="19.8" y2="19.8" />
-                    <line x1="1" y1="12" x2="3" y2="12" />
-                    <line x1="21" y1="12" x2="23" y2="12" />
-                    <line x1="4.2" y1="19.8" x2="5.6" y2="18.4" />
-                    <line x1="18.4" y1="5.6" x2="19.8" y2="4.2" />
-                </g>
-            </svg>
-            
-            <svg class="icon icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-            </svg>
-        </button>
+    <div class="logo" onclick="window.location.reload()">
+        <img src="images/yo.png" alt="Raúl Padilla" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--accent-color);">
+        <span class="logo-text">Raúl <span class="initial">Padilla</span></span>
     </div>
-    <img src="images/yo.png" class="logo" alt="Foto de Raúl">
-    <h1 class="title"><span class="initial">R</span>aúl <span class="initial">P</span>adilla</h1>
-    <p class="subtitle" data-i18n="subtitle">Software Developer</p>
+    <div class="nav-container">
+        <nav class="nav-links">
+            <a href="#about"><span data-es>Sobre mí</span><span data-en>About</span></a>
+            <a href="#experience"><span data-es>Experiencia</span><span data-en>Experience</span></a>
+            <a href="#stack"><span data-es>Stack</span><span data-en>Stack</span></a>
+            <a href="#projects"><span data-es>Proyectos</span><span data-en>Projects</span></a>
+            <a href="#blog"><span data-es>Blog</span><span data-en>Blog</span></a>
+            <a href="#contact"><span data-es>Contacto</span><span data-en>Contact</span></a>
+        </nav>
+        <div class="toggles">
+            <button id="lang-toggle" class="toggle-btn" aria-label="Cambiar idioma">ES / EN</button>
+            <button id="theme-toggle" class="toggle-btn" aria-label="Cambiar tema">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </div>
 </header>
 
-<main class="container card">
+<main>
+    <section class="hero">
+        <h1 data-es>Construyo software <span class="initial">robusto</span>, sostenible y con <span class="initial">visión de producto</span></h1>
+        <h1 data-en>I build <span class="initial">robust</span>, sustainable software with <span class="initial">product vision</span></h1>
+        
+        <p data-es>Especializado en Software Craftsmanship, Prácticas XP y Desarrollo con visión Lean Mind para crear soluciones de valor.</p>
+        <p data-en>Specialized in Software Craftsmanship, XP Practices, and Development with a Lean Mind vision to create valuable solutions.</p>
+        
+        <div class="hero-btns">
+            <a href="#contact" class="btn btn-primary">
+                <span data-es>Trabajemos juntos</span>
+                <span data-en>Let's work together</span>
+            </a>
+            <a href="#experience" class="btn btn-secondary">
+                <span data-es>Ver trayectoria</span>
+                <span data-en>View career</span>
+            </a>
+        </div>
+    </section>
 
-    <section class="links">
-        <h2 data-i18n="projects">Proyectos</h2>
-        <div class="link-icons projects">
-            <div class="link-item" data-info="blog">
-                <a class="link-link" href="https://raulpadilladelgado.github.io/blog/">
-                    <img src="images/blog.png" class="icon" alt="">
-                </a>
-                <button class="info-toggle" aria-expanded="false" aria-label="Más info">
-                    <svg class="info-icon" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">
-                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1" />
-                        <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-                        <circle cx="7" cy="10.5" r="0.6" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="info-card" aria-hidden="true"></div>
+    <section id="about" class="about">
+        <h2 class="section-title">
+            <span data-es>Sobre mí & Filosofía</span>
+            <span data-en>About Me & Philosophy</span>
+        </h2>
+        <div class="about-grid">
+            <div class="card magnum-opus">
+                <h3 data-es>Magnum Opus</h3>
+                <h3 data-en>Magnum Opus</h3>
+                <p data-es>Me considero un profesional con una gran pasión por construir productos de alto impacto que resuelvan necesidades cotidianas y aporten un valor real a las personas. Mi enfoque equilibra la excelencia en ingeniería de software con una profunda sensibilidad hacia el diseño de producto y la experiencia de usuario (UX).</p>
+                <p data-en>I consider myself a professional with a great passion for building high-impact products that solve everyday needs and provide real value to people. My approach balances software engineering excellence with a deep sensitivity towards product design and user experience (UX).</p>
+                
+                <p style="margin-top: 1rem; color: var(--text-secondary);" data-es>Soy proactivo, autodirigido y con un ojo crítico para los detalles que diferencian un buen desarrollo de uno excepcional.</p>
+                <p style="margin-top: 1rem; color: var(--text-secondary);" data-en>I am proactive, self-directed, and have a critical eye for the details that differentiate a good development from an exceptional one.</p>
             </div>
-
-            <div class="link-item" data-info="lift">
-                <a class="link-link" href="https://lift-snowy-iota.vercel.app/" target="_blank" rel="noopener">
-                    <img src="images/lift.png" class="icon" alt="Lift logo">
-                </a>
-                <button class="info-toggle" aria-expanded="false" aria-label="Más info">
-                    <svg class="info-icon" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">
-                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1" />
-                        <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-                        <circle cx="7" cy="10.5" r="0.6" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="info-card" aria-hidden="true"></div>
-            </div>
-
-            <div class="link-item" data-info="github">
-                <a class="link-link" href="https://github.com/raulpadilladelgado">
-                    
-                    <svg class="icon svg-icon" viewBox="0 0 24 24" width="52" height="52" aria-hidden="true" focusable="false">
-                        <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.45.11-3.02 0 0 .97-.31 3.18 1.18a11.04 11.04 0 012.9-.39c.98.01 1.97.13 2.9.39 2.2-1.5 3.17-1.18 3.17-1.18.62 1.57.24 2.73.12 3.02.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.68.41.35.78 1.04.78 2.1 0 1.52-.01 2.75-.01 3.13 0 .3.2.66.79.55C20.71 21.38 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/>
-                    </svg>
-                </a>
-                <button class="info-toggle" aria-expanded="false" aria-label="Más info">
-                    <svg class="info-icon" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">
-                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1" />
-                        <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-                        <circle cx="7" cy="10.5" r="0.6" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="info-card" aria-hidden="true"></div>
-            </div>
-
-            <div class="link-item" data-info="espaoil">
-                <a class="link-link" href="https://espaoil-front.vercel.app">
-                    <img src="images/espaoil.png" class="icon" alt="">
-                </a>
-                <button class="info-toggle" aria-expanded="false" aria-label="Más info">
-                    <svg class="info-icon" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">
-                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1" />
-                        <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-                        <circle cx="7" cy="10.5" r="0.6" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="info-card" aria-hidden="true"></div>
-            </div>
-
-            <div class="link-item" data-info="actions">
-                <a class="link-link" href="https://github.com/marketplace/actions/check-dependencies-in-pull-request">
-                    <img src="images/github-actions.png" class="icon" alt="">
-                </a>
-                <button class="info-toggle" aria-expanded="false" aria-label="Más info">
-                    <svg class="info-icon" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">
-                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1" />
-                        <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-                        <circle cx="7" cy="10.5" r="0.6" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="info-card" aria-hidden="true"></div>
-            </div>
-
-            <div class="link-item" data-info="ghcleaner">
-                <a class="link-link" href="https://github.com/raulpadilladelgado/ghcleaner">
-                    <img src="images/ghcleaner.png" class="icon" alt="">
-                </a>
-                <button class="info-toggle" aria-expanded="false" aria-label="Más info">
-                    <svg class="info-icon" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">
-                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1" />
-                        <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-                        <circle cx="7" cy="10.5" r="0.6" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="info-card" aria-hidden="true"></div>
+            <div class="philosophy-cards">
+                <div class="card phil-card">
+                    <div class="phil-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                        <h4 data-es>Prácticas XP (TDD)</h4>
+                        <h4 data-en>XP Practices (TDD)</h4>
+                        <p data-es>Desarrollo Guiado por Pruebas, refactorización avanzada, Pair Programming y entrega continua.</p>
+                        <p data-en>Test-Driven Development, advanced refactoring, Pair Programming, and continuous delivery.</p>
+                    </div>
+                </div>
+                <div class="card phil-card">
+                    <div class="phil-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    </div>
+                    <div>
+                        <h4 data-es>Arquitectura Robusta (Hexagonal)</h4>
+                        <h4 data-en>Robust Architecture (Hexagonal)</h4>
+                        <p data-es>Diseño Guiado por el Dominio (DDD) para soluciones escalables, modulares y mantenibles.</p>
+                        <p data-en>Domain-Driven Design (DDD) for scalable, modular, and maintainable solutions.</p>
+                    </div>
+                </div>
+                <div class="card phil-card">
+                    <div class="phil-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div>
+                        <h4 data-es>Visión de Negocio & UX</h4>
+                        <h4 data-en>Business Vision & UX</h4>
+                        <p data-es>Colaboración estrecha para traducir lógica de negocio en interfaces intuitivas y amigables.</p>
+                        <p data-en>Close collaboration to translate business logic into intuitive and friendly interfaces.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <h2 data-i18n="contact">Contacto</h2>
-        <div class="link-icons contact">
-            <div class="link-item" data-info="email">
-                <a class="link-link" href="mailto:padilladelgadoraul@gmail.com">
-                    <img src="images/gmail.png" class="icon" alt="">
-                </a>
-                <button class="info-toggle" aria-expanded="false" aria-label="Más info">
-                    <svg class="info-icon" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">
-                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1" />
-                        <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-                        <circle cx="7" cy="10.5" r="0.6" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="info-card" aria-hidden="true"></div>
+    <section id="experience" class="experience">
+        <h2 class="section-title">
+            <a href="https://linkedin.com/in/raulpadilladelgado" target="_blank" data-es>Hitos y Trayectoria</a>
+            <a href="https://linkedin.com/in/raulpadilladelgado" target="_blank" data-en>Career Highlights</a>
+        </h2>
+        <div class="highlights-list">
+            <div class="highlight-item">
+                <div class="highlight-date" data-es>JULIO 2020 - ACTUALIDAD</div>
+                <div class="highlight-date" data-en>JULY 2020 - PRESENT</div>
+                <h4 data-es>Software Developer en Lean Mind</h4>
+                <h4 data-en>Software Developer at Lean Mind</h4>
+                <p data-es>Liderazgo técnico, migraciones críticas, diseño de sistemas escalables y mentoría en buenas prácticas.</p>
+                <p data-en>Technical leadership, critical migrations, scalable system design, and mentoring in best practices.</p>
             </div>
-            <div class="link-item" data-info="linkedin">
-                <a class="link-link" href="https://www.linkedin.com/in/raulpadilladelgado/">
-                    <img src="images/linkedin-icon.png" class="icon" alt="">
-                </a>
-                <button class="info-toggle" aria-expanded="false" aria-label="Más info">
-                    <svg class="info-icon" viewBox="0 0 14 14" width="14" height="14" aria-hidden="true" focusable="false">
-                        <circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1" />
-                        <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-                        <circle cx="7" cy="10.5" r="0.6" fill="currentColor" />
-                    </svg>
-                </button>
-                <div class="info-card" aria-hidden="true"></div>
+            <div class="highlight-item">
+                <div class="highlight-date" data-es>HITO</div>
+                <div class="highlight-date" data-en>HIGHLIGHT</div>
+                <h4 data-es>Migraciones Críticas en Entornos Complejos</h4>
+                <h4 data-en>Critical Migrations in Complex Environments</h4>
+                <p data-es>Lideré la migración de un sistema crítico bajo plazos ajustados, optimizando el flujo en equipos multiculturales usando IA para acelerar la curva técnica.</p>
+                <p data-en>Led the migration of a critical system under tight deadlines, optimizing flow in multicultural teams using AI to accelerate the technical curve.</p>
             </div>
+            <div class="highlight-item">
+                <div class="highlight-date" data-es>HITO</div>
+                <div class="highlight-date" data-en>HIGHLIGHT</div>
+                <h4 data-es>Diseño de Sistemas de Facturación Escalables</h4>
+                <h4 data-en>Scalable Billing Systems Design</h4>
+                <p data-es>Implementación desde cero de una plataforma de facturación masiva en AWS (Microservicios) para miles de clientes.</p>
+                <p data-en>Greenfield implementation of a massive billing platform on AWS (Microservices) for thousands of clients.</p>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-date" data-es>HITO</div>
+                <div class="highlight-date" data-en>HIGHLIGHT</div>
+                <h4 data-es>Mentoría y Adopción de Buenas Prácticas</h4>
+                <h4 data-en>Mentoring and Adoption of Best Practices</h4>
+                <p data-es>Liderazgo técnico en refactorización masiva de código legado, guiando al equipo en la adopción de Pair Programming y TDD.</p>
+                <p data-en>Technical leadership in massive legacy code refactoring, guiding the team in the deep adoption of Pair Programming and TDD.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="stack">
+        <h2 class="section-title">
+            <span data-es>Tecnologías</span>
+            <span data-en>Stack</span>
+        </h2>
+        <div class="projects-grid">
+            <div class="card">
+                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <span data-es>Tecnologías Principales</span>
+                    <span data-en>Core Technologies</span>
+                </h4>
+                <div class="project-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">SQL</span>
+                </div>
+            </div>
+            <div class="card">
+                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">
+                    <span data-es>Complementarias</span>
+                    <span data-en>Complementary</span>
+                </h4>
+                <div class="project-tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Symfony</span>
+                    <span class="tag">Dart</span>
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Ansible</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">Grafana</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">
+            <a href="https://github.com/raulpadilladelgado" target="_blank" data-es>Proyectos</a>
+            <a href="https://github.com/raulpadilladelgado" target="_blank" data-en>Projects</a>
+        </h2>
+        <div class="projects-grid">
+            <div class="card project-card">
+                <img src="images/github-actions.png" alt="GitHub Actions" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
+                <h3 data-es>GitHub Actions</h3>
+                <h3 data-en>GitHub Actions</h3>
+                <p data-es>Check dependencies in Pull Request. Acción para automatizar la revisión de dependencias.</p>
+                <p data-en>Check dependencies in Pull Request. Action to automate dependency review.</p>
+                <div class="project-tags">
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">CI/CD</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+            <div class="card project-card">
+                <img src="images/espaoil.png" alt="Espaoil" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
+                <h3 data-es>Espaoil</h3>
+                <h3 data-en>Espaoil</h3>
+                <p data-es>Aplicación para encontrar gasolineras baratas cercanas. Desarrollada con enfoque en UX y utilidad real.</p>
+                <p data-en>App to find nearby cheap gas stations. Developed with a focus on UX and real utility.</p>
+                <div class="project-tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">
+                        <span data-es>Geolocalización</span>
+                        <span data-en>Geolocation</span>
+                    </span>
+                </div>
+            </div>
+            <div class="card project-card">
+                <img src="images/lift.png" alt="Lift" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
+                <h3 data-es>Lift</h3>
+                <h3 data-en>Lift</h3>
+                <p data-es>Aplicación sencilla para registrar tus entrenamientos y progreso. Foco en simplicidad y rapidez de uso.</p>
+                <p data-en>Simple app to record your workouts and progress. Focus on simplicity and speed of use.</p>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Mobile First</span>
+                    <span class="tag">Vercel</span>
+                </div>
+            </div>
+            <div class="card project-card">
+                <img src="images/ghcleaner.png" alt="GH Cleaner" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
+                <h3 data-es>GH Cleaner</h3>
+                <h3 data-en>GH Cleaner</h3>
+                <p data-es>Utilidad de Bash para eliminar repositorios no utilizados usando IA para resumir su contenido.</p>
+                <p data-en>Bash utility to remove unused repositories using AI to summarize their content.</p>
+                <div class="project-tags">
+                    <span class="tag">Bash</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">OpenAI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <h2 class="section-title">
+            <a href="https://raulpadilladelgado.github.io/blog/" target="_blank" data-es>Blog</a>
+            <a href="https://raulpadilladelgado.github.io/blog/" target="_blank" data-en>Blog</a>
+        </h2>
+        <div class="blog-grid">
+            <a href="https://raulpadilladelgado.github.io/blog/" class="card blog-card">
+                <h4 data-es>Testcontainers para ejecución local</h4>
+                <h4 data-en>Testcontainers for local execution</h4>
+                <p data-es>Optimización del entorno de pruebas.</p>
+                <p data-en>Optimizing the testing environment.</p>
+            </a>
+            <a href="https://raulpadilladelgado.github.io/blog/" class="card blog-card">
+                <h4 data-es>Test más legible, comestible</h4>
+                <h4 data-en>More readable, edible tests</h4>
+                <p data-es>El arte de escribir tests comprensibles.</p>
+                <p data-en>The art of writing understandable tests.</p>
+            </a>
+            <a href="https://raulpadilladelgado.github.io/blog/" class="card blog-card">
+                <h4 data-es>La personalidad en un aprendiz</h4>
+                <h4 data-en>Personality in an apprentice</h4>
+                <p data-es>Crecimiento y mentalidad técnica.</p>
+                <p data-en>Technical growth and mindset.</p>
+            </a>
+            <a href="https://raulpadilladelgado.github.io/blog/" class="card blog-card">
+                <h4 data-es>Guía para modificar código legacy</h4>
+                <h4 data-en>Guide to modifying legacy code</h4>
+                <p data-es>Estrategias para no morir en el intento.</p>
+                <p data-en>Strategies for not dying in the attempt.</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="footer">
+        <h2 class="section-title">
+            <span data-es>Contacto</span>
+            <span data-en>Contact</span>
+        </h2>
+        <div class="contact-container">
+            <div>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-es>¿Tienes un proyecto interesante en mente? Hablemos sobre cómo puedo ayudarte a construir software de calidad.</p>
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-en>Have an interesting project in mind? Let's talk about how I can help you build quality software.</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/raulpadilladelgado" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="https://github.com/raulpadilladelgado" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </a>
+                    <a href="mailto:raul.padilla@leanmind.es" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleContact(event)">
+                <div class="form-group">
+                    <input type="text" id="contact-name" placeholder="Nombre" data-placeholder-es="Nombre" data-placeholder-en="Name" required>
+                    <input type="email" id="contact-email" placeholder="Email" data-placeholder-es="Email" data-placeholder-en="Email" required>
+                </div>
+                <textarea id="contact-message" rows="4" placeholder="Mensaje" data-placeholder-es="Mensaje" data-placeholder-en="Message" required></textarea>
+                <button type="submit" class="btn btn-primary">
+                    <span data-es>Enviar Mensaje</span>
+                    <span data-en>Send Message</span>
+                </button>
+            </form>
         </div>
     </section>
 </main>
 
 <script>
-document.addEventListener('DOMContentLoaded', function(){
-    console.log('[init] DOMContentLoaded');
-    const translations = {
-        en: {
-            subtitle: "Software Developer",
-            projects: "Projects",
-            contact: "Contact",
-            social: "Social",
-            blog: "Blog",
-            github: "GitHub",
-            rss: "RSS",
-            email: "Email",
-            linkedin: "LinkedIn"
-            ,
-            info: {
-                blog: "Latest posts, technical notes and tutorials.",
-                github: "Code repositories, contributions and sample projects.",
-                espaoil: "Espaoil: App to find nearest cheapest gas stations.",
-                lift: "Lift: Simple app to track your workouts and progress.",
-                actions: "Automation examples and CI integrations I've published.",
-                email: "Send me a message — I reply to collaboration and questions.",
-                linkedin: "Professional profile and experiences.",
-                ghcleaner: "Bash utility to remove unused repositories using AI to resume their contents and importance."
-            }
-        },
-        es: {
-            subtitle: "Desarrollador de Software",
-            projects: "Proyectos",
-            contact: "Contacto",
-            social: "Social",
-            blog: "Blog",
-            github: "GitHub",
-            rss: "RSS",
-            email: "Correo",
-            linkedin: "LinkedIn"
-            ,
-            info: {
-                blog: "Entradas recientes, apuntes técnicos y tutoriales.",
-                github: "Repositorios de código, contribuciones y proyectos de ejemplo.",
-                espaoil: "Espaoil: Aplicación para encontrar gasolineras baratas cercanas.",
-                lift: "Lift: Aplicación sencilla para registrar tus entrenamientos y progreso.",
-                actions: "Ejemplos de automatización e integraciones CI que publiqué.",
-                email: "Mándame un mensaje — contesto para colaboraciones y dudas.",
-                linkedin: "Perfil profesional y experiencia.",
-                ghcleaner: "Utilidad de Bash para eliminar repositorios no utilizados usando IA para resumir su contenido e importancia."
-            }
+    function detectLanguage() {
+        const browserLang = navigator.language || navigator.userLanguage;
+        const lang = browserLang.startsWith('es') ? 'es' : 'en';
+        setLanguage(lang);
+    }
+
+    function setLanguage(lang) {
+        document.documentElement.setAttribute('lang', lang);
+        document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+            el.placeholder = el.getAttribute('data-placeholder-' + lang);
+        });
+    }
+
+    function toggleLanguage() {
+        const currentLang = document.documentElement.getAttribute('lang');
+        setLanguage(currentLang === 'es' ? 'en' : 'es');
+    }
+
+    function toggleTheme() {
+        const isDark = document.body.classList.contains('light-theme');
+        if (isDark) {
+            document.body.classList.remove('light-theme');
+            document.querySelector('.sun-icon').style.display = 'block';
+            document.querySelector('.moon-icon').style.display = 'none';
+        } else {
+            document.body.classList.add('light-theme');
+            document.querySelector('.sun-icon').style.display = 'none';
+            document.querySelector('.moon-icon').style.display = 'block';
         }
-    };
-
-    let themeOverride = null;
-
-    function systemPrefersDark(){
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
 
-    function applyTheme(pref){
-        let useDark;
-        if(pref === 'dark') useDark = true;
-        else if(pref === 'light') useDark = false;
-        else useDark = systemPrefersDark();
-        document.documentElement.classList.toggle('dark', useDark);
-        updateThemeButton(useDark);
-    }
-    const themeToggle = document.getElementById('themeToggle');
-
-    themeOverride = null;
-    applyTheme(themeOverride);
-    console.log('[init] theme applied (auto, no persistence)');
-
-    const mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-    if(mq){
-        mq.addEventListener && mq.addEventListener('change', ()=>{
-            if(themeOverride === null) applyTheme(null);
-        });
+    function handleContact(event) {
+        event.preventDefault();
+        const name = document.getElementById('contact-name').value;
+        const email = document.getElementById('contact-email').value;
+        const message = document.getElementById('contact-message').value;
+        const subject = `Contacto Web: ${name}`;
+        const body = `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`;
+        window.location.href = `mailto:raul.padilla@leanmind.es?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 
-    function updateThemeButton(isDark){
-    const btn = themeToggle || document.getElementById('themeToggle');
-    if(!btn) return;
-    btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    btn.classList.toggle('is-dark', isDark);
+    document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
+    document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+    // Initial detection
+    detectLanguage();
+
+    // Initial theme detection
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.body.classList.add('light-theme');
+        document.querySelector('.sun-icon').style.display = 'none';
+        document.querySelector('.moon-icon').style.display = 'block';
     }
-
-    if(themeToggle){
-        themeToggle.addEventListener('click', ()=>{
-            const effectiveDark = document.documentElement.classList.contains('dark');
-            themeOverride = effectiveDark ? 'light' : 'dark';
-            themeToggle.classList.add('rotating');
-            applyTheme(themeOverride);
-            setTimeout(()=> themeToggle.classList.remove('rotating'), 420);
-        });
-    }
-
-    function detectLang() {
-        const nav = navigator.language || navigator.userLanguage || 'es';
-        return nav.startsWith('en') ? 'en' : 'es';
-    }
-
-    function applyTranslations(lang){
-        document.documentElement.lang = lang;
-        document.querySelectorAll('[data-i18n]').forEach(el=>{
-            const key = el.getAttribute('data-i18n');
-            if(translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
-        });
-    }
-
-    let currentLang = detectLang();
-    applyTranslations(currentLang);
-
-    const langToggle = document.getElementById('langToggle');
-    if(langToggle){
-        langToggle.addEventListener('click', ()=>{
-            currentLang = currentLang === 'en' ? 'es' : 'en';
-            applyTranslations(currentLang);
-            langToggle.textContent = currentLang.toUpperCase();
-            populateInfoCards();
-        });
-        langToggle.textContent = currentLang.toUpperCase();
-    }
-    console.log('[init] langToggle, themeToggle elements:', !!langToggle, !!themeToggle);
-
-    function getInfoText(key){
-        try{ return translations[currentLang].info[key] || ''; }catch(e){return ''}
-    }
-
-    function populateInfoCards(){
-        document.querySelectorAll('.link-item').forEach(item=>{
-            const key = item.getAttribute('data-info');
-            const card = item.querySelector('.info-card');
-            if(card){
-                card.textContent = getInfoText(key) || '';
-            }
-        });
-    }
-
-    populateInfoCards();
-
-    document.querySelectorAll('.link-item').forEach(item=>{
-        const card = item.querySelector('.info-card');
-        const toggle = item.querySelector('.info-toggle');
-        item.addEventListener('mouseenter', ()=>{
-            if(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches){
-                card.classList.add('visible'); card.setAttribute('aria-hidden','false');
-            }
-        });
-        item.addEventListener('mouseleave', ()=>{
-            if(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches){
-                card.classList.remove('visible'); card.setAttribute('aria-hidden','true');
-            }
-        });
-        if(toggle){
-            const closeAllInfoCards = ()=>{
-                document.querySelectorAll('.link-item').forEach(otherItem=>{
-                    const otherCard = otherItem.querySelector('.info-card');
-                    const otherToggle = otherItem.querySelector('.info-toggle');
-                    if(otherCard && otherCard.classList.contains('visible')){
-                        otherCard.classList.remove('visible','sheet');
-                        otherCard.setAttribute('aria-hidden','true');
-                        if(otherToggle) otherToggle.setAttribute('aria-expanded','false');
-                        const sc = otherCard.querySelector('.sheet-close'); if(sc) sc.remove();
-                    }
-                });
-            };
-
-            toggle.addEventListener('click', (e)=>{
-                e.preventDefault(); e.stopPropagation();
-                const expanded = toggle.getAttribute('aria-expanded') === 'true';
-                if(!expanded){
-                    closeAllInfoCards();
-                    toggle.setAttribute('aria-expanded','true');
-                    card.classList.add('visible');
-                    card.setAttribute('aria-hidden','false');
-                } else {
-                    toggle.setAttribute('aria-expanded','false');
-                    card.classList.remove('visible');
-                    card.setAttribute('aria-hidden','true');
-                }
-            });
-
-            document.addEventListener('click', (ev)=>{
-                if(!ev.target.closest('.link-item')){
-                    closeAllInfoCards();
-                }
-            });
-        }
-    });
-
-    document.querySelectorAll('.info-card.sheet .sheet-close').forEach(n=>n.remove());
-    document.querySelectorAll('.info-card.sheet').forEach(n=>n.classList.remove('sheet'));
-});
 </script>
 
 </body>
