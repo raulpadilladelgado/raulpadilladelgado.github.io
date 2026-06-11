@@ -13,9 +13,10 @@
 <body>
 
 <header class="header">
-    <div class="logo" onclick="window.location.reload()">
-        <img src="images/yo.png" alt="Raúl Padilla" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--accent-color);">
-        <span class="logo-text">Raúl <span class="initial">Padilla</span></span>
+    <!-- onclick reload base site -->
+    <div class="logo" onclick="window.location.href = window.location.origin + window.location.pathname;">
+        <img src="images/yo.png" alt="Raúl Padilla" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--accent-color); display: block;">
+        <span class="logo-text">Raúl Padilla</span>
     </div>
     <div class="nav-container">
         <nav class="nav-links">
@@ -198,85 +199,93 @@
             <a href="https://github.com/raulpadilladelgado" target="_blank" data-en>Projects</a>
         </h2>
         <div class="projects-grid">
-            <div class="card project-card">
-                <img src="images/github-actions.png" alt="GitHub Actions" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
-                <h3 data-es>GitHub Actions</h3>
-                <h3 data-en>GitHub Actions</h3>
-                <p data-es>Check dependencies in Pull Request. Acción para automatizar la revisión de dependencias.</p>
-                <p data-en>Check dependencies in Pull Request. Action to automate dependency review.</p>
-                <div class="project-tags">
-                    <span class="tag">GitHub Actions</span>
-                    <span class="tag">CI/CD</span>
-                    <span class="tag">Automation</span>
-                </div>
-            </div>
-            <div class="card project-card">
-                <img src="images/espaoil.png" alt="Espaoil" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
-                <h3 data-es>Espaoil</h3>
-                <h3 data-en>Espaoil</h3>
-                <p data-es>Aplicación para encontrar gasolineras baratas cercanas. Desarrollada con enfoque en UX y utilidad real.</p>
-                <p data-en>App to find nearby cheap gas stations. Developed with a focus on UX and real utility.</p>
-                <div class="project-tags">
-                    <span class="tag">Next.js</span>
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">
+            <a href="https://github.com/marketplace/actions/check-dependencies-in-pull-request">
+                <div class="card project-card">
+                    <img src="images/github-actions.png" alt="GitHub Actions" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
+                    <h3 data-es>GitHub Actions</h3>
+                    <h3 data-en>GitHub Actions</h3>
+                    <p data-es>Check dependencies in Pull Request. Acción para automatizar la revisión de dependencias.</p>
+                    <p data-en>Check dependencies in Pull Request. Action to automate dependency review.</p>
+                    <div class="project-tags">
+                        <span class="tag">GitHub Actions</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div> 
+            </a>
+            <a href="https://espaoil.com">
+                <div class="card project-card">
+                    <img src="images/espaoil.png" alt="Espaoil" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
+                    <h3 data-es>Espaoil</h3>
+                    <h3 data-en>Espaoil</h3>
+                    <p data-es>Aplicación para encontrar gasolineras baratas cercanas. Desarrollada con enfoque en UX y utilidad real.</p>
+                    <p data-en>App to find nearby cheap gas stations. Developed with a focus on UX and real utility.</p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">
                         <span data-es>Geolocalización</span>
                         <span data-en>Geolocation</span>
                     </span>
+                    </div>
+                </div>   
+            </a>
+            <a href="https://lift-sage.vercel.app/">
+                <div class="card project-card">
+                    <img src="images/lift.png" alt="Lift" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
+                    <h3 data-es>Lift</h3>
+                    <h3 data-en>Lift</h3>
+                    <p data-es>Aplicación sencilla para registrar tus entrenamientos y progreso. Foco en simplicidad y rapidez de uso.</p>
+                    <p data-en>Simple app to record your workouts and progress. Focus on simplicity and speed of use.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Mobile First</span>
+                        <span class="tag">Vercel</span>
+                    </div>
                 </div>
-            </div>
-            <div class="card project-card">
-                <img src="images/lift.png" alt="Lift" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
-                <h3 data-es>Lift</h3>
-                <h3 data-en>Lift</h3>
-                <p data-es>Aplicación sencilla para registrar tus entrenamientos y progreso. Foco en simplicidad y rapidez de uso.</p>
-                <p data-en>Simple app to record your workouts and progress. Focus on simplicity and speed of use.</p>
-                <div class="project-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">Mobile First</span>
-                    <span class="tag">Vercel</span>
+            </a>
+            <a href="https://github.com/raulpadilladelgado/GitHub-repositories-cleaner">
+                <div class="card project-card">
+                    <img src="images/ghcleaner.png" alt="GH Cleaner" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
+                    <h3 data-es>GH Cleaner</h3>
+                    <h3 data-en>GH Cleaner</h3>
+                    <p data-es>Utilidad de Bash para eliminar repositorios no utilizados usando IA para resumir su contenido.</p>
+                    <p data-en>Bash utility to remove unused repositories using AI to summarize their content.</p>
+                    <div class="project-tags">
+                        <span class="tag">Bash</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">OpenAI</span>
+                    </div>
                 </div>
-            </div>
-            <div class="card project-card">
-                <img src="images/ghcleaner.png" alt="GH Cleaner" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
-                <h3 data-es>GH Cleaner</h3>
-                <h3 data-en>GH Cleaner</h3>
-                <p data-es>Utilidad de Bash para eliminar repositorios no utilizados usando IA para resumir su contenido.</p>
-                <p data-en>Bash utility to remove unused repositories using AI to summarize their content.</p>
-                <div class="project-tags">
-                    <span class="tag">Bash</span>
-                    <span class="tag">AI</span>
-                    <span class="tag">OpenAI</span>
-                </div>
-            </div>
+            </a>
         </div>
     </section>
 
     <section id="blog" class="blog">
         <h2 class="section-title">
-            <a href="https://raulpadilladelgado.github.io/blog/" target="_blank" data-es>Blog</a>
-            <a href="https://raulpadilladelgado.github.io/blog/" target="_blank" data-en>Blog</a>
+            <a href="https://raulpadilladelgado.github.io/blog/" target="_blank" data-es>Publicaciones destacadas</a>
+            <a href="https://raulpadilladelgado.github.io/blog/" target="_blank" data-en>Featured posts</a>
         </h2>
         <div class="blog-grid">
-            <a href="https://raulpadilladelgado.github.io/blog/" class="card blog-card">
+            <a href="https://leanmind.es/es/blog/testcontainers-para-ejecucion-local" class="card blog-card">
                 <h4 data-es>Testcontainers para ejecución local</h4>
                 <h4 data-en>Testcontainers for local execution</h4>
                 <p data-es>Optimización del entorno de pruebas.</p>
                 <p data-en>Optimizing the testing environment.</p>
             </a>
-            <a href="https://raulpadilladelgado.github.io/blog/" class="card blog-card">
+            <a href="https://leanmind.es/es/blog/test-mas-legible-test-mas-comestible" class="card blog-card">
                 <h4 data-es>Test más legible, comestible</h4>
                 <h4 data-en>More readable, edible tests</h4>
                 <p data-es>El arte de escribir tests comprensibles.</p>
                 <p data-en>The art of writing understandable tests.</p>
             </a>
-            <a href="https://raulpadilladelgado.github.io/blog/" class="card blog-card">
+            <a href="https://leanmind.es/es/blog/la-personalidad-en-un-aprendiz" class="card blog-card">
                 <h4 data-es>La personalidad en un aprendiz</h4>
                 <h4 data-en>Personality in an apprentice</h4>
                 <p data-es>Crecimiento y mentalidad técnica.</p>
                 <p data-en>Technical growth and mindset.</p>
             </a>
-            <a href="https://raulpadilladelgado.github.io/blog/" class="card blog-card">
+            <a href="https://leanmind.es/es/blog/guia-para-modificar-codigo-legacy" class="card blog-card">
                 <h4 data-es>Guía para modificar código legacy</h4>
                 <h4 data-en>Guide to modifying legacy code</h4>
                 <p data-es>Estrategias para no morir en el intento.</p>
