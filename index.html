@@ -31,7 +31,7 @@
             <button id="lang-toggle" class="toggle-btn" aria-label="Cambiar idioma">ES / EN</button>
             <button id="theme-toggle" class="toggle-btn" aria-label="Cambiar tema">
                 <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             </button>
         </div>
     </div>
@@ -39,21 +39,24 @@
 
 <main>
     <section class="hero">
-        <h1 data-es>Construyo software <span class="initial">robusto</span>, sostenible y con <span class="initial">visión de producto</span></h1>
-        <h1 data-en>I build <span class="initial">robust</span>, sustainable software with <span class="initial">product vision</span></h1>
-        
-        <p data-es>Especializado en Software Craftsmanship, Prácticas XP y Desarrollo con visión Lean Mind para crear soluciones de valor.</p>
-        <p data-en>Specialized in Software Craftsmanship, XP Practices, and Development with a Lean Mind vision to create valuable solutions.</p>
-        
-        <div class="hero-btns">
-            <a href="#contact" class="btn btn-primary">
-                <span data-es>Trabajemos juntos</span>
-                <span data-en>Let's work together</span>
-            </a>
-            <a href="#experience" class="btn btn-secondary">
-                <span data-es>Ver trayectoria</span>
-                <span data-en>View career</span>
-            </a>
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <h1 data-es>Construyo software <span class="initial">robusto</span>, sostenible y con <span class="initial">visión de producto</span></h1>
+            <h1 data-en>I build <span class="initial">robust</span>, sustainable software with <span class="initial">product vision</span></h1>
+            
+            <p data-es>Especializado en Software Craftsmanship, Prácticas XP y Desarrollo con visión Lean Mind para crear soluciones de valor.</p>
+            <p data-en>Specialized in Software Craftsmanship, XP Practices, and Development with a Lean Mind vision to create valuable solutions.</p>
+            
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">
+                    <span data-es>Trabajemos juntos</span>
+                    <span data-en>Let's work together</span>
+                </a>
+                <a href="#experience" class="btn btn-secondary">
+                    <span data-es>Ver trayectoria</span>
+                    <span data-en>View career</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -386,16 +389,7 @@
     }
 
     function toggleTheme() {
-        const isDark = document.body.classList.contains('light-theme');
-        if (isDark) {
-            document.body.classList.remove('light-theme');
-            document.querySelector('.sun-icon').style.display = 'block';
-            document.querySelector('.moon-icon').style.display = 'none';
-        } else {
-            document.body.classList.add('light-theme');
-            document.querySelector('.sun-icon').style.display = 'none';
-            document.querySelector('.moon-icon').style.display = 'block';
-        }
+        document.body.classList.toggle('light-theme');
     }
 
     function handleContact(event) {
@@ -417,8 +411,6 @@
     // Initial theme detection
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
         document.body.classList.add('light-theme');
-        document.querySelector('.sun-icon').style.display = 'none';
-        document.querySelector('.moon-icon').style.display = 'block';
     }
 </script>
 
