@@ -148,8 +148,12 @@ a {
     width: 50%;
     min-height: 100vh;
     background-image:
-        linear-gradient(to bottom, var(--bg-color) 0%, transparent 25%, transparent 75%, var(--bg-color) 100%),
-        url('images/yo1.jpeg');
+    /* Degradado de izquierda a derecha */
+    linear-gradient(to right, var(--bg-color) 0%, transparent 25%, transparent 75%, var(--bg-color) 100%),
+    /* Degradado de arriba a abajo (el tuyo original) */
+    linear-gradient(to bottom, var(--bg-color) 0%, transparent 25%, transparent 75%, var(--bg-color) 100%),
+    /* Tu imagen de fondo */
+    url('images/yo1.jpeg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -481,45 +485,6 @@ input:focus, textarea:focus {
 @media (max-width: 600px) {
     .hero-image { background-position: center 10%; }
 }
-
-.light-theme {
-    --bg-color: #ffffff;
-    --card-bg: #f9f9f9;
-    --text-primary: #1a1a1a;
-    --text-secondary: #52525b;
-    --border-color: rgba(0, 0, 0, 0.1);
-    --accent-color: #6da300;
-    --accent-glow: rgba(109, 163, 0, 0.15);
-}
-
-.light-theme .header {
-    background: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-body.light-theme::before {
-    color: rgba(0, 0, 0, 0.03);
-}
-
-.light-theme input, .light-theme textarea {
-    background: rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #1a1a1a;
-}
-
-.light-theme .tag {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-.light-theme .toggle-btn {
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #1a1a1a;
-}
-
-.moon-icon { display: none; }
-.light-theme .sun-icon { display: none; }
-.light-theme .moon-icon { display: block; }
 
 /* Language Visibility */
 [data-en], [data-es] {
