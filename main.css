@@ -241,7 +241,7 @@ a.project-card:hover { transform: translateY(-5px); border-color: #b8caff; box-s
 .project-card-featured { background: linear-gradient(145deg, #fffefa 55%, #edf2ff); }
 .project-card-head { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; }
 .project-card-head img { width: 43px; height: 43px; object-fit: contain; border-radius: 11px; }
-.toolify-mark { display: grid; place-items: center; flex: 0 0 43px; width: 43px; height: 43px; border: 1px solid #c9d5f5; border-radius: 11px; color: var(--blue); background: var(--blue-soft); font: 700 18px var(--mono); }
+.project-card-head .toolify-logo { width: 72px; height: 33px; flex: 0 0 72px; border-radius: 6px; object-fit: contain; }
 .project-type { color: var(--blue); font: 500 8px var(--mono); text-transform: uppercase; letter-spacing: .04em; }
 .project-arrow { margin-left: auto; color: #8e96a5; font-size: 17px; }
 .project-card h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: -.04em; }
