@@ -50,7 +50,7 @@
         <div class="portrait-edge">
           <img class="hero-portrait" src="images/yo1.jpeg" alt="" fetchpriority="high">
         </div>
-        <span class="visual-caption"><span class="caption-dot"></span><span data-es>código con intención</span><span data-en>code with intent</span></span>
+        <span class="visual-caption"><span class="caption-dot"></span><span data-es>arrastra para explorar</span><span data-en>drag to explore</span></span>
       </div>
 
       <div class="hero-copy">
@@ -345,36 +345,50 @@
 
     const heroVisual = document.getElementById('hero-visual');
     const heroPortrait = heroVisual.querySelector('.hero-portrait');
-    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const trailSymbols = ['{}', 'test()', '✓', 'await', 'refactor()'];
     let lastTrailTime = 0;
     let trailIndex = 0;
 
-    if (finePointer.matches && !reducedMotion.matches) {
-      heroVisual.addEventListener('pointermove', function (event) {
-        const bounds = heroVisual.getBoundingClientRect();
-        const x = event.clientX - bounds.left;
-        const y = event.clientY - bounds.top;
-        heroPortrait.style.setProperty('--cursor-x', x + 'px');
-        heroPortrait.style.setProperty('--cursor-y', y + 'px');
-        heroPortrait.classList.add('is-revealing');
+    function updatePortraitReveal(event) {
+      const bounds = heroVisual.getBoundingClientRect();
+      const x = event.clientX - bounds.left;
+      const y = event.clientY - bounds.top;
+      heroPortrait.style.setProperty('--cursor-x', x + 'px');
+      heroPortrait.style.setProperty('--cursor-y', y + 'px');
+      heroPortrait.classList.add('is-revealing');
 
-        const now = performance.now();
-        if (now - lastTrailTime > 95) {
-          lastTrailTime = now;
-          const particle = document.createElement('span');
-          particle.className = 'code-particle';
-          particle.textContent = trailSymbols[trailIndex % trailSymbols.length];
-          trailIndex += 1;
-          particle.style.left = (x + (Math.random() * 26 - 13)) + 'px';
-          particle.style.top = (y + (Math.random() * 26 - 13)) + 'px';
-          heroVisual.appendChild(particle);
-          window.setTimeout(function () { particle.remove(); }, 850);
-        }
+      const now = performance.now();
+      if (now - lastTrailTime > 95) {
+        lastTrailTime = now;
+        const particle = document.createElement('span');
+        particle.className = 'code-particle';
+        particle.textContent = trailSymbols[trailIndex % trailSymbols.length];
+        trailIndex += 1;
+        particle.style.left = (x + (Math.random() * 26 - 13)) + 'px';
+        particle.style.top = (y + (Math.random() * 26 - 13)) + 'px';
+        heroVisual.appendChild(particle);
+        window.setTimeout(function () { particle.remove(); }, 850);
+      }
+    }
+
+    if (!reducedMotion.matches) {
+      heroVisual.addEventListener('pointermove', function (event) {
+        if (event.pointerType === 'touch' && event.buttons === 0) return;
+        updatePortraitReveal(event);
+      });
+
+      heroVisual.addEventListener('pointerdown', function (event) {
+        if (event.pointerType === 'touch') updatePortraitReveal(event);
       });
 
       heroVisual.addEventListener('pointerleave', function () {
+        heroPortrait.classList.remove('is-revealing');
+      });
+      heroVisual.addEventListener('pointerup', function (event) {
+        if (event.pointerType === 'touch') heroPortrait.classList.remove('is-revealing');
+      });
+      heroVisual.addEventListener('pointercancel', function () {
         heroPortrait.classList.remove('is-revealing');
       });
     }

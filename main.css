@@ -87,6 +87,7 @@ html[lang="es"] a[data-es], html[lang="en"] a[data-en] { display: inline-flex !i
 
 .hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(38px, 6vw, 88px); min-height: min(790px, calc(100svh - 76px)); padding-top: 54px; padding-bottom: 82px; }
 .hero-visual { position: relative; min-width: 0; aspect-ratio: .94 / 1; max-height: 680px; isolation: isolate; overflow: visible; border-radius: 28px; }
+.hero-visual { touch-action: pan-y; }
 .code-world {
   position: absolute; inset: 0; overflow: hidden; border-radius: inherit;
   background:
@@ -100,7 +101,7 @@ html[lang="es"] a[data-es], html[lang="en"] a[data-en] { display: inline-flex !i
 }
 .code-note { position: absolute; z-index: 1; color: #145cff; font: 500 11px/1.7 var(--mono); white-space: nowrap; }
 .note-one { top: 13%; left: 2%; }
-.note-two { top: 7%; right: -8%; text-align: left; }
+.note-two { top: 7%; right: 2%; width: 43%; text-align: left; white-space: normal; overflow-wrap: anywhere; }
 .note-three { right: -1%; bottom: 25%; }
 .note-four { left: 2%; bottom: 20%; opacity: .75; }
 .code-symbol { position: absolute; z-index: 1; color: rgba(20,92,255,.6); font: 500 34px var(--mono); }
@@ -328,7 +329,7 @@ a.project-card:hover { transform: translateY(-5px); border-color: #b8caff; box-s
   .hero-proof { margin-top: 28px; }
   .scroll-cue { display: none; }
   .note-one { left: 0; top: 9%; font-size: 9px; }
-  .note-two { right: -1%; top: 4%; font-size: 8px; }
+  .note-two { right: 2%; top: 4%; width: 45%; font-size: 8px; }
   .note-three { right: 0; font-size: 8px; }
   .note-four { left: 0; bottom: 12%; font-size: 9px; }
   .services, .about, .experience, .stack, .projects, .blog { padding-top: 80px; }
