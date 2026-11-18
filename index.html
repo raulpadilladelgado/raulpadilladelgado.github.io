@@ -1,404 +1,383 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Raúl Padilla | Software Developer</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="images/yo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Raúl Padilla desarrolla productos digitales, integra sistemas y automatiza procesos con visión de producto, buenas prácticas e IA aplicada con criterio.">
+  <title>Raúl Padilla — Software, producto e ingeniería</title>
+  <link rel="icon" href="images/yo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-<header class="header">
-    <!-- onclick reload base site -->
-    <div class="logo" onclick="window.location.href = window.location.origin + window.location.pathname;">
-        <img src="images/yo.png" alt="Raúl Padilla" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--accent-color); display: block;">
-        <span class="logo-text">Raúl Padilla</span>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Raúl Padilla, inicio">
+      <img src="images/yo.png" alt="" width="38" height="38">
+      <span>Raúl Padilla<span class="brand-period">.</span></span>
+    </a>
+    <div class="header-controls">
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="#about"><span data-es>Sobre mí</span><span data-en>About</span></a>
+        <a href="#experience"><span data-es>Experiencia</span><span data-en>Experience</span></a>
+        <a href="#stack"><span data-es>Stack</span><span data-en>Stack</span></a>
+        <a href="#projects"><span data-es>Proyectos</span><span data-en>Projects</span></a>
+        <a href="#blog"><span data-es>Blog</span><span data-en>Writing</span></a>
+        <a href="#contact"><span data-es>Contacto</span><span data-en>Contact</span></a>
+      </nav>
+      <button class="language-toggle" id="lang-toggle" type="button" aria-label="Cambiar idioma">ES <span>/</span> EN</button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
     </div>
-    <div class="nav-container">
-        <nav class="nav-links">
-            <a href="#about"><span data-es>Sobre mí</span><span data-en>About</span></a>
-            <a href="#experience"><span data-es>Experiencia</span><span data-en>Experience</span></a>
-            <a href="#stack"><span data-es>Stack</span><span data-en>Stack</span></a>
-            <a href="#projects"><span data-es>Proyectos</span><span data-en>Projects</span></a>
-            <a href="#blog"><span data-es>Blog</span><span data-en>Blog</span></a>
-            <a href="#contact"><span data-es>Contacto</span><span data-en>Contact</span></a>
-        </nav>
-        <div class="toggles">
-            <button id="lang-toggle" class="toggle-btn" aria-label="Cambiar idioma">ES / EN</button>
-        </div>
-    </div>
-</header>
+  </header>
 
-<main>
-    <section class="hero">
-        <div class="hero-image"></div>
-        <div class="hero-content">
-            <h1 data-es>Construyo software <span class="initial">robusto</span>, sostenible y con <span class="initial">visión de producto</span></h1>
-            <h1 data-en>I build <span class="initial">robust</span>, sustainable software with <span class="initial">product vision</span></h1>
-            
-            <p data-es>Especializado en Software Craftsmanship, Prácticas XP y Desarrollo con visión Lean Mind para crear soluciones de valor.</p>
-            <p data-en>Specialized in Software Craftsmanship, XP Practices, and Development with a Lean Mind vision to create valuable solutions.</p>
-            
-            <div class="hero-btns">
-                <a href="#contact" class="btn btn-primary">
-                    <span data-es>Trabajemos juntos</span>
-                    <span data-en>Let's work together</span>
-                </a>
-                <a href="#experience" class="btn btn-secondary">
-                    <span data-es>Ver trayectoria</span>
-                    <span data-en>View career</span>
-                </a>
-            </div>
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-visual" id="hero-visual" aria-hidden="true">
+        <div class="code-world">
+          <div class="code-note note-one">if (bug) {<br>&nbsp;&nbsp;writeTest();<br>&nbsp;&nbsp;fix(bug);<br>}</div>
+          <div class="code-note note-two">// Works on my machine.<br>// Let's make it reproducible.</div>
+          <div class="code-note note-three">const idea = "worth building";</div>
+          <div class="code-note note-four">while (coffee) build();</div>
+          <span class="code-symbol symbol-one">{ }</span>
+          <span class="code-symbol symbol-two">✓</span>
+          <span class="code-symbol symbol-three">→</span>
+          <span class="code-cursor"></span>
         </div>
+        <div class="portrait-edge">
+          <img class="hero-portrait" src="images/yo1.jpeg" alt="" fetchpriority="high">
+        </div>
+        <span class="visual-caption"><span class="caption-dot"></span><span data-es>código con intención</span><span data-en>code with intent</span></span>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span><span data-es>Software · Producto · Lean Mind</span><span data-en>Software · Product · Lean Mind</span></p>
+        <h1 id="hero-title">
+          <span data-es>¿Tienes una idea de <em>producto?</em></span>
+          <span data-en>Have a product <em>idea?</em></span>
+        </h1>
+        <p class="hero-lead">
+          <span data-es>La convertimos en software útil. Te acompaño desde entender el problema hasta poner una solución en manos de las personas.</span>
+          <span data-en>Let's turn it into useful software. I work with you from understanding the problem to putting a solution in people's hands.</span>
+        </p>
+        <p class="hero-support">
+          <span data-es>También conecto sistemas y automatizo procesos, con visión de producto y cuidado por cada detalle técnico.</span>
+          <span data-en>I also connect systems and automate processes, with product thinking and care for every technical detail.</span>
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact"><span data-es>Cuéntame tu idea</span><span data-en>Tell me your idea</span><span class="button-arrow" aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#projects"><span data-es>Ver productos propios</span><span data-en>Explore my products</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-proof">
+          <span class="proof-mark" aria-hidden="true">XP</span>
+          <span data-es>Ingeniería sólida, colaboración cercana y entregas que se pueden comprobar.</span>
+          <span data-en>Solid engineering, close collaboration, and outcomes you can verify.</span>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#services" aria-label="Desplazarse a servicios"><span></span></a>
     </section>
 
-    <section id="about" class="about">
-        <h2 class="section-title">
-            <span data-es>Sobre mí & Filosofía</span>
-            <span data-en>About Me & Philosophy</span>
-        </h2>
-        <div class="about-grid">
-            <div class="card magnum-opus">
-                <h3 data-es>Magnum Opus</h3>
-                <h3 data-en>Magnum Opus</h3>
-                <p data-es>Me considero un profesional con una gran pasión por construir productos de alto impacto que resuelvan necesidades cotidianas y aporten un valor real a las personas. Mi enfoque equilibra la excelencia en ingeniería de software con una profunda sensibilidad hacia el diseño de producto y la experiencia de usuario (UX).</p>
-                <p data-en>I consider myself a professional with a great passion for building high-impact products that solve everyday needs and provide real value to people. My approach balances software engineering excellence with a deep sensitivity towards product design and user experience (UX).</p>
-                
-                <p style="margin-top: 1rem; color: var(--text-secondary);" data-es>Soy proactivo, autodirigido y con un ojo crítico para los detalles que diferencian un buen desarrollo de uno excepcional.</p>
-                <p style="margin-top: 1rem; color: var(--text-secondary);" data-en>I am proactive, self-directed, and have a critical eye for the details that differentiate a good development from an exceptional one.</p>
-            </div>
-            <div class="philosophy-cards">
-                <div class="card phil-card">
-                    <div class="phil-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <div>
-                        <h4 data-es>Prácticas XP (TDD)</h4>
-                        <h4 data-en>XP Practices (TDD)</h4>
-                        <p data-es>Desarrollo Guiado por Pruebas, refactorización avanzada, Pair Programming y entrega continua.</p>
-                        <p data-en>Test-Driven Development, advanced refactoring, Pair Programming, and continuous delivery.</p>
-                    </div>
-                </div>
-                <div class="card phil-card">
-                    <div class="phil-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                    </div>
-                    <div>
-                        <h4 data-es>Arquitectura Robusta (Hexagonal)</h4>
-                        <h4 data-en>Robust Architecture (Hexagonal)</h4>
-                        <p data-es>Diseño Guiado por el Dominio (DDD) para soluciones escalables, modulares y mantenibles.</p>
-                        <p data-en>Domain-Driven Design (DDD) for scalable, modular, and maintainable solutions.</p>
-                    </div>
-                </div>
-                <div class="card phil-card">
-                    <div class="phil-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <div>
-                        <h4 data-es>Visión de Negocio & UX</h4>
-                        <h4 data-en>Business Vision & UX</h4>
-                        <p data-es>Colaboración estrecha para traducir lógica de negocio en interfaces intuitivas y amigables.</p>
-                        <p data-en>Close collaboration to translate business logic into intuitive and friendly interfaces.</p>
-                    </div>
-                </div>
-            </div>
+    <section class="services section-shell" id="services" aria-labelledby="services-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span data-es>Cómo puedo ayudarte</span><span data-en>How I can help</span></p>
+          <h2 id="services-title"><span data-es>De una necesidad a una solución real.</span><span data-en>From a real need to a real solution.</span></h2>
         </div>
+        <p class="section-intro"><span data-es>Trabajo contigo para dar forma a la idea, tomar buenas decisiones técnicas y llevarla a producción.</span><span data-en>I work with you to shape the idea, make sound technical decisions, and bring it to production.</span></p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="service-topline"><span class="service-index">01</span><span class="service-icon" aria-hidden="true">↗</span></div>
+          <h3><span data-es>Crear un producto desde cero</span><span data-en>Build a product from scratch</span></h3>
+          <p><span data-es>Definir el problema, diseñar la solución y desarrollar software que aporte valor desde la primera versión.</span><span data-en>Understand the problem, shape the solution, and build software that delivers value from its first version.</span></p>
+          <a href="#contact" class="card-link"><span data-es>Hablemos de tu idea</span><span data-en>Let's talk about your idea</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-topline"><span class="service-index">02</span><span class="service-icon service-icon-lines" aria-hidden="true">⟷</span></div>
+          <h3><span data-es>Integrar y automatizar</span><span data-en>Integrate and automate</span></h3>
+          <p><span data-es>Conectar herramientas, eliminar tareas repetitivas y crear flujos fiables que simplifiquen el trabajo.</span><span data-en>Connect tools, remove repetitive tasks, and create reliable workflows that make work simpler.</span></p>
+          <a href="#contact" class="card-link"><span data-es>Cuéntame qué quieres mejorar</span><span data-en>Tell me what you'd like to improve</span><span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
     </section>
 
-    <section id="experience" class="experience">
-        <h2 class="section-title">
-            <a href="https://linkedin.com/in/raulpadilladelgado" target="_blank" data-es>Hitos y Trayectoria</a>
-            <a href="https://linkedin.com/in/raulpadilladelgado" target="_blank" data-en>Career Highlights</a>
-        </h2>
-        <div class="highlights-list">
-            <div class="highlight-item">
-                <div class="highlight-date" data-es>JULIO 2020 - ACTUALIDAD</div>
-                <div class="highlight-date" data-en>JULY 2020 - PRESENT</div>
-                <h4 data-es>Software Developer en Lean Mind</h4>
-                <h4 data-en>Software Developer at Lean Mind</h4>
-                <p data-es>Liderazgo técnico, migraciones críticas, diseño de sistemas escalables y mentoría en buenas prácticas.</p>
-                <p data-en>Technical leadership, critical migrations, scalable system design, and mentoring in best practices.</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-date" data-es>HITO</div>
-                <div class="highlight-date" data-en>HIGHLIGHT</div>
-                <h4 data-es>Sistemas Distribuidos y Evolución Técnica</h4>
-                <h4 data-en>Distributed Systems & Technical Evolution</h4>
-                <p data-es>Dirección de migraciones complejas mediante forks open-source y flujos concurrentes, integrando IA para acelerar el aprendizaje del equipo.</p>
-                <p data-en>Directed complex migrations using open-source forks and concurrent flows, integrating AI to accelerate team learning.</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-date" data-es>HITO</div>
-                <div class="highlight-date" data-en>HIGHLIGHT</div>
-                <h4 data-es>Sistemas de Facturación Escalables en AWS</h4>
-                <h4 data-en>Scalable Billing Systems on AWS</h4>
-                <p data-es>Diseño e implementación desde cero de plataformas de facturación masiva basadas en microservicios para miles de usuarios concurrentes.</p>
-                <p data-en>Greenfield design and implementation of massive billing platforms based on microservices for thousands of concurrent users.</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-date" data-es>HITO</div>
-                <div class="highlight-date" data-en>HIGHLIGHT</div>
-                <h4 data-es>Liderazgo Técnico y Código Sostenible</h4>
-                <h4 data-en>Technical Leadership & Sustainable Code</h4>
-                <p data-es>Mentoría en refactorización de código legado, promoviendo TDD y Pair Programming para garantizar software mantenible a largo plazo.</p>
-                <p data-en>Mentorship in legacy code refactoring, promoting TDD and Pair Programming to ensure long-term maintainable software.</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-date" data-es>HITO</div>
-                <div class="highlight-date" data-en>HIGHLIGHT</div>
-                <h4 data-es>Herramientas de Alcance Global</h4>
-                <h4 data-en>Global Impact Tooling</h4>
-                <p data-es>Creación de herramientas internas para automatizar la gestión de dependencias y flujos de trabajo en equipos de ingeniería globales.</p>
-                <p data-en>Creation of internal tools to automate dependency management and workflows across global engineering teams.</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-date" data-es>HITO</div>
-                <div class="highlight-date" data-en>HIGHLIGHT</div>
-                <h4 data-es>Sistemas Multiplataforma y Criptografía</h4>
-                <h4 data-en>Cross-platform Systems & Cryptography</h4>
-                <p data-es>Desarrollo de ecosistemas nativos e híbridos con integración de librerías criptográficas avanzadas para información crítica.</p>
-                <p data-en>Development of native and hybrid ecosystems integrating advanced cryptographic libraries for critical information.</p>
-            </div>
-            <div class="highlight-item">
-                <div class="highlight-date" data-es>HITO</div>
-                <div class="highlight-date" data-en>HIGHLIGHT</div>
-                <h4 data-es>IA Confidencial y Secure MPC</h4>
-                <h4 data-en>Confidential AI & Secure MPC</h4>
-                <p data-es>Diseño de infraestructura para Private Federated Learning y Secure MPC enfocada en la privacidad del entrenamiento distribuido de LLMs.</p>
-                <p data-en>Infrastructure design for Private Federated Learning and Secure MPC focused on privacy for distributed LLM training.</p>
-            </div>
+    <section id="about" class="about section-shell" aria-labelledby="about-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span data-es>Sobre mí & filosofía</span><span data-en>About me & philosophy</span></p>
+          <h2 id="about-title"><span data-es>Software con propósito y oficio.</span><span data-en>Software with purpose and craft.</span></h2>
         </div>
+        <span class="section-code" aria-hidden="true">/* 01 — PRINCIPLES */</span>
+      </div>
+      <div class="about-grid">
+        <article class="about-feature reveal">
+          <span class="feature-kicker"><span data-es>Mi forma de entender el desarrollo</span><span data-en>How I think about software</span></span>
+          <h3>Magnum<br><span>Opus</span></h3>
+          <p data-es>Me apasiona construir productos de alto impacto que resuelvan necesidades cotidianas y aporten valor real. Equilibro la excelencia en ingeniería con sensibilidad por el producto y la experiencia de usuario.</p>
+          <p data-en>I love building high-impact products that solve everyday needs and deliver real value. I balance engineering excellence with sensitivity to product design and user experience.</p>
+          <p class="about-muted" data-es>Soy proactivo, autodirigido y atento a los detalles que convierten un buen desarrollo en una solución excepcional.</p>
+          <p class="about-muted" data-en>I'm proactive, self-directed, and attentive to the details that turn good software into an exceptional solution.</p>
+          <div class="signature-line"><span>Raúl Padilla</span><span class="signature-spark">✳</span></div>
+        </article>
+        <div class="principles">
+          <article class="principle-card reveal">
+            <span class="principle-icon" aria-hidden="true">&lt;/&gt;</span>
+            <div><h3><span data-es>Prácticas XP y TDD</span><span data-en>XP practices and TDD</span></h3><p data-es>Pruebas, refactorización, Pair Programming y entrega continua para avanzar con confianza.</p><p data-en>Testing, refactoring, pair programming, and continuous delivery to move forward with confidence.</p></div>
+            <span class="principle-number">01</span>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-icon" aria-hidden="true">◇</span>
+            <div><h3><span data-es>Arquitectura que evoluciona</span><span data-en>Architecture that evolves</span></h3><p data-es>DDD, diseño hexagonal y soluciones modulares que se pueden mantener y adaptar.</p><p data-en>DDD, hexagonal design, and modular solutions that can be maintained and adapted.</p></div>
+            <span class="principle-number">02</span>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-icon" aria-hidden="true">◎</span>
+            <div><h3><span data-es>Producto y experiencia</span><span data-en>Product and experience</span></h3><p data-es>Colaboración para entender el negocio y convertirlo en experiencias claras y útiles.</p><p data-en>Collaboration to understand the business and turn it into clear, useful experiences.</p></div>
+            <span class="principle-number">03</span>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="stack" class="stack">
-        <h2 class="section-title">
-            <span data-es>Tecnologías</span>
-            <span data-en>Stack</span>
-        </h2>
-        <div class="projects-grid">
-            <div class="card">
-                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">
-                    <span data-es>Tecnologías Principales</span>
-                    <span data-en>Core Technologies</span>
-                </h4>
-                <div class="project-tags">
-                    <span class="tag">Java</span>
-                    <span class="tag">Kotlin</span>
-                    <span class="tag">TypeScript</span>
-                    <span class="tag">Spring Boot</span>
-                    <span class="tag">Next.js</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">AWS</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">GitHub Actions</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">Python</span>
-                </div>
-            </div>
-            <div class="card">
-                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">
-                    <span data-es>Complementarias</span>
-                    <span data-en>Complementary</span>
-                </h4>
-                <div class="project-tags">
-                    <span class="tag">PHP</span>
-                    <span class="tag">Symfony</span>
-                    <span class="tag">Dart</span>
-                    <span class="tag">Flutter</span>
-                    <span class="tag">Ansible</span>
-                    <span class="tag">Terraform</span>
-                    <span class="tag">Grafana</span>
-                </div>
-            </div>
+    <section class="ai-section section-shell" aria-labelledby="ai-title">
+      <div class="ai-panel">
+        <div class="ai-heading">
+          <div>
+            <p class="eyebrow"><span data-es>IA aplicada con criterio</span><span data-en>AI applied with intent</span></p>
+            <h2 id="ai-title"><span data-es>Un pairing que amplía la mirada.</span><span data-en>A pairing partner that broadens the view.</span></h2>
+          </div>
+          <p class="ai-intro"><span data-es>Integro IA a lo largo del desarrollo para explorar, construir y encontrar lo que puede pasar desapercibido. El criterio y la responsabilidad siguen siendo humanos.</span><span data-en>I use AI throughout development to explore, build, and spot what might otherwise be missed. Judgment and responsibility remain human.</span></p>
         </div>
+        <div class="workflow-rail" aria-label="Proceso de desarrollo asistido por IA">
+          <article class="workflow-step reveal">
+            <span class="step-index">01</span><span class="step-icon" aria-hidden="true">◉</span>
+            <h3><span data-es>Entender</span><span data-en>Understand</span></h3>
+            <p data-es>Contrastar la conversación, aclarar dudas y transformar necesidades en tareas.</p><p data-en>Review the conversation, clarify questions, and turn needs into tasks.</p>
+          </article>
+          <article class="workflow-step reveal">
+            <span class="step-index">02</span><span class="step-icon" aria-hidden="true">⌘</span>
+            <h3><span data-es>Dar contexto</span><span data-en>Set context</span></h3>
+            <p data-es>Guías y skills del proyecto, entorno aislado y permisos definidos.</p><p data-en>Project guides and skills, an isolated environment, and defined permissions.</p>
+          </article>
+          <article class="workflow-step reveal">
+            <span class="step-index">03</span><span class="step-icon" aria-hidden="true">≡</span>
+            <h3><span data-es>Planificar</span><span data-en>Plan</span></h3>
+            <p data-es>Un plan detallado por tarea, con criterios de aceptación comprobables.</p><p data-en>A detailed plan for each task, with verifiable acceptance criteria.</p>
+          </article>
+          <article class="workflow-step reveal">
+            <span class="step-index">04</span><span class="step-icon" aria-hidden="true">T↓</span>
+            <h3><span data-es>Implementar</span><span data-en>Implement</span></h3>
+            <p data-es>Desarrollar con TDD, refactorizar y mantener el código legible.</p><p data-en>Develop with TDD, refactor, and keep the code readable.</p>
+          </article>
+          <article class="workflow-step reveal">
+            <span class="step-index">05</span><span class="step-icon" aria-hidden="true">✓</span>
+            <h3><span data-es>Verificar</span><span data-en>Verify</span></h3>
+            <p data-es>Revisar cada cambio, pruebas, seguridad y una forma determinista de validar el resultado.</p><p data-en>Review every change, tests, security, and a deterministic way to validate the result.</p>
+          </article>
+        </div>
+        <div class="ai-footnote"><span class="ai-pulse"></span><span data-es>La IA acelera el pairing. TDD, revisión y verificación mantienen el rumbo.</span><span data-en>AI speeds up pairing. TDD, review, and verification keep it on track.</span></div>
+      </div>
     </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">
-            <a href="https://github.com/raulpadilladelgado" target="_blank" data-es>Proyectos</a>
-            <a href="https://github.com/raulpadilladelgado" target="_blank" data-en>Projects</a>
-        </h2>
-        <div class="projects-grid">
-            <a href="https://espaoil.com">
-                <div class="card project-card">
-                    <img src="images/espaoil.png" alt="Espaoil" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
-                    <h3 data-es>Espaoil</h3>
-                    <h3 data-en>Espaoil</h3>
-                    <p data-es>Aplicación para encontrar gasolineras baratas cercanas. Desarrollada con enfoque en UX y utilidad real.</p>
-                    <p data-en>App to find nearby cheap gas stations. Developed with a focus on UX and real utility.</p>
-                    <div class="project-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">
-                        <span data-es>Geolocalización</span>
-                        <span data-en>Geolocation</span>
-                    </span>
-                    </div>
-                </div>
-            </a>
-            <a href="https://lift-sage.vercel.app/">
-                <div class="card project-card">
-                    <img src="images/lift.png" alt="Lift" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
-                    <h3 data-es>Lift</h3>
-                    <h3 data-en>Lift</h3>
-                    <p data-es>Aplicación sencilla para registrar tus entrenamientos y progreso. Foco en simplicidad y rapidez de uso.</p>
-                    <p data-en>Simple app to record your workouts and progress. Focus on simplicity and speed of use.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Mobile First</span>
-                        <span class="tag">Vercel</span>
-                    </div>
-                </div>
-            </a>
-            <a href="https://github.com/raulpadilladelgado/GitHub-repositories-cleaner">
-                <div class="card project-card">
-                    <img src="images/ghcleaner.png" alt="GH Cleaner" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
-                    <h3 data-es>GH Cleaner</h3>
-                    <h3 data-en>GH Cleaner</h3>
-                    <p data-es>Utilidad de Bash para eliminar repositorios no utilizados usando IA para resumir su contenido.</p>
-                    <p data-en>Bash utility to remove unused repositories using AI to summarize their content.</p>
-                    <div class="project-tags">
-                        <span class="tag">Bash</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">OpenAI</span>
-                    </div>
-                </div>
-            </a>
-            <a href="https://github.com/marketplace/actions/check-dependencies-in-pull-request">
-                <div class="card project-card">
-                    <img src="images/github-actions.png" alt="GitHub Actions" style="width: 40px; height: 40px; margin-bottom: 1rem; border-radius: 8px;">
-                    <h3 data-es>GitHub Actions</h3>
-                    <h3 data-en>GitHub Actions</h3>
-                    <p data-es>Check dependencies in Pull Request. Acción para automatizar la revisión de dependencias.</p>
-                    <p data-en>Check dependencies in Pull Request. Action to automate dependency review.</p>
-                    <div class="project-tags">
-                        <span class="tag">GitHub Actions</span>
-                        <span class="tag">CI/CD</span>
-                        <span class="tag">Automation</span>
-                    </div>
-                </div>
-            </a>
-        </div>
+    <section id="experience" class="experience section-shell" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span data-es>Experiencia</span><span data-en>Experience</span></p><h2 id="experience-title"><span data-es>Hitos y trayectoria.</span><span data-en>Career highlights.</span></h2></div>
+        <a class="section-link" href="https://linkedin.com/in/raulpadilladelgado" target="_blank" rel="noreferrer"><span data-es>Mi trayectoria profesional</span><span data-en>My professional profile</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><span class="timeline-date" data-es>JULIO 2020 — ACTUALIDAD</span><span class="timeline-date" data-en>JULY 2020 — PRESENT</span><span class="timeline-marker"></span><h3 data-es>Software Developer en Lean Mind</h3><h3 data-en>Software Developer at Lean Mind</h3><p data-es>Liderazgo técnico, migraciones críticas, diseño de sistemas escalables y mentoría en buenas prácticas.</p><p data-en>Technical leadership, critical migrations, scalable system design, and mentoring in good practices.</p></article>
+        <article class="timeline-item reveal"><span class="timeline-date" data-es>HITO</span><span class="timeline-date" data-en>HIGHLIGHT</span><span class="timeline-marker"></span><h3 data-es>Sistemas distribuidos y evolución técnica</h3><h3 data-en>Distributed systems and technical evolution</h3><p data-es>Dirección de migraciones complejas mediante forks open-source y flujos concurrentes, integrando IA para acelerar el aprendizaje del equipo.</p><p data-en>Led complex migrations using open-source forks and concurrent flows, integrating AI to accelerate team learning.</p></article>
+        <article class="timeline-item reveal"><span class="timeline-date" data-es>HITO</span><span class="timeline-date" data-en>HIGHLIGHT</span><span class="timeline-marker"></span><h3 data-es>Sistemas de facturación escalables en AWS</h3><h3 data-en>Scalable billing systems on AWS</h3><p data-es>Diseño e implementación desde cero de plataformas de facturación masiva basadas en microservicios para miles de usuarios concurrentes.</p><p data-en>Greenfield design and implementation of high-volume billing platforms based on microservices for thousands of concurrent users.</p></article>
+        <article class="timeline-item reveal"><span class="timeline-date" data-es>HITO</span><span class="timeline-date" data-en>HIGHLIGHT</span><span class="timeline-marker"></span><h3 data-es>Liderazgo técnico y código sostenible</h3><h3 data-en>Technical leadership and sustainable code</h3><p data-es>Mentoría en refactorización de código legado, promoviendo TDD y Pair Programming para crear software mantenible a largo plazo.</p><p data-en>Mentoring teams in legacy-code refactoring, promoting TDD and pair programming to build software that lasts.</p></article>
+        <article class="timeline-item reveal"><span class="timeline-date" data-es>HITO</span><span class="timeline-date" data-en>HIGHLIGHT</span><span class="timeline-marker"></span><h3 data-es>Herramientas de alcance global</h3><h3 data-en>Global-impact tooling</h3><p data-es>Creación de herramientas internas para automatizar dependencias y flujos de trabajo en equipos de ingeniería globales.</p><p data-en>Built internal tools to automate dependency management and workflows across global engineering teams.</p></article>
+        <article class="timeline-item reveal"><span class="timeline-date" data-es>HITO</span><span class="timeline-date" data-en>HIGHLIGHT</span><span class="timeline-marker"></span><h3 data-es>Sistemas multiplataforma y criptografía</h3><h3 data-en>Cross-platform systems and cryptography</h3><p data-es>Desarrollo de ecosistemas nativos e híbridos con integración de librerías criptográficas para información crítica.</p><p data-en>Developed native and hybrid ecosystems with cryptographic libraries for critical information.</p></article>
+        <article class="timeline-item reveal"><span class="timeline-date" data-es>HITO</span><span class="timeline-date" data-en>HIGHLIGHT</span><span class="timeline-marker"></span><h3 data-es>IA confidencial y Secure MPC</h3><h3 data-en>Confidential AI and Secure MPC</h3><p data-es>Diseño de infraestructura para Private Federated Learning y Secure MPC, centrada en la privacidad del entrenamiento distribuido de LLMs.</p><p data-en>Designed infrastructure for Private Federated Learning and Secure MPC, focused on privacy in distributed LLM training.</p></article>
+      </div>
     </section>
 
-    <section id="blog" class="blog">
-        <h2 class="section-title">
-            <a href="https://raulpadilladelgado.github.io/blog/" target="_blank" data-es>Publicaciones destacadas</a>
-            <a href="https://raulpadilladelgado.github.io/blog/" target="_blank" data-en>Featured posts</a>
-        </h2>
-        <div class="blog-grid">
-            <a href="https://leanmind.es/es/blog/testcontainers-para-ejecucion-local" class="card blog-card">
-                <h4 data-es>Testcontainers para ejecución local</h4>
-                <h4 data-en>Testcontainers for local execution</h4>
-                <p data-es>Optimización del entorno de pruebas.</p>
-                <p data-en>Optimizing the testing environment.</p>
-            </a>
-            <a href="https://leanmind.es/es/blog/test-mas-legible-test-mas-comestible" class="card blog-card">
-                <h4 data-es>Test más legible, comestible</h4>
-                <h4 data-en>More readable, edible tests</h4>
-                <p data-es>El arte de escribir tests comprensibles.</p>
-                <p data-en>The art of writing understandable tests.</p>
-            </a>
-            <a href="https://leanmind.es/es/blog/la-personalidad-en-un-aprendiz" class="card blog-card">
-                <h4 data-es>La personalidad en un aprendiz</h4>
-                <h4 data-en>Personality in an apprentice</h4>
-                <p data-es>Crecimiento y mentalidad técnica.</p>
-                <p data-en>Technical growth and mindset.</p>
-            </a>
-            <a href="https://leanmind.es/es/blog/guia-para-modificar-codigo-legacy" class="card blog-card">
-                <h4 data-es>Guía para modificar código legacy</h4>
-                <h4 data-en>Guide to modifying legacy code</h4>
-                <p data-es>Estrategias para no morir en el intento.</p>
-                <p data-en>Strategies for not dying in the attempt.</p>
-            </a>
-            <a href="https://www.linkedin.com/posts/raulpadilladelgado_desarrolloweb-inteligenciaartificial-softwaredevelopment-activity-7375471950988599296-HZ0M?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_C-EwBnDwr3Xd5rdfjueE2V1wWEZJ8Fl4" class="card blog-card">
-                <h4 data-es>No, la IA no va a hacer tu trabajo. Te está haciendo peor programador</h4>
-                <h4 data-en>No, AI won't take your job. It's making you a worse programmer</h4>
-                <p data-es>El impacto de la IA en la calidad del desarrollo de software.</p>
-                <p data-en>The impact of AI on software development quality.</p>
-            </a>
-            <a href="https://www.linkedin.com/posts/raulpadilladelgado_desarrollodesoftware-pragmatismo-softwarecraftsmanship-activity-7377990480506200064-EeuV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_C-EwBnDwr3Xd5rdfjueE2V1wWEZJ8Fl4" class="card blog-card">
-                <h4 data-es>Tu pasión por aprender podría ser tu peor enemigo</h4>
-                <h4 data-en>Your passion for learning could be your worst enemy</h4>
-                <p data-es>Los peligros de aprender sin un propósito claro.</p>
-                <p data-en>The dangers of learning without a clear purpose.</p>
-            </a>
-        </div>
+    <section id="stack" class="stack section-shell" aria-labelledby="stack-title">
+      <div class="section-heading compact-heading">
+        <div><p class="eyebrow"><span data-es>Herramientas</span><span data-en>Tools</span></p><h2 id="stack-title"><span data-es>Stack tecnológico.</span><span data-en>Technology stack.</span></h2></div>
+        <span class="section-code" aria-hidden="true">const toolkit = "always evolving";</span>
+      </div>
+      <div class="stack-grid">
+        <article class="stack-card reveal"><h3><span class="stack-icon" aria-hidden="true">&lt;/&gt;</span><span data-es>Tecnologías principales</span><span data-en>Core technologies</span></h3><div class="tag-list"><span>Java</span><span>Kotlin</span><span>TypeScript</span><span>Spring Boot</span><span>Next.js</span><span>Node.js</span><span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>SQL</span><span>Python</span></div></article>
+        <article class="stack-card reveal"><h3><span class="stack-icon" aria-hidden="true">✳</span><span data-es>Complementarias</span><span data-en>Complementary</span></h3><div class="tag-list"><span>PHP</span><span>Symfony</span><span>Dart</span><span>Flutter</span><span>Ansible</span><span>Terraform</span><span>Grafana</span></div></article>
+      </div>
     </section>
 
-    <section id="contact" class="footer">
-        <h2 class="section-title">
-            <span data-es>Contacto</span>
-            <span data-en>Contact</span>
-        </h2>
-        <div class="contact-container">
-            <div>
-                <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-es>¿Tienes un proyecto interesante en mente? Hablemos sobre cómo puedo ayudarte a construir software de calidad.</p>
-                <p style="margin-bottom: 2rem; color: var(--text-secondary);" data-en>Have an interesting project in mind? Let's talk about how I can help you build quality software.</p>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/raulpadilladelgado" aria-label="LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                    </a>
-                    <a href="https://github.com/raulpadilladelgado" aria-label="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                    </a>
-                    <a href="mailto:raul.padilla@leanmind.es" aria-label="Email">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </a>
-                </div>
-            </div>
-            <form class="contact-form" onsubmit="handleContact(event)">
-                <div class="form-group">
-                    <input type="text" id="contact-name" placeholder="Nombre" data-placeholder-es="Nombre" data-placeholder-en="Name" required>
-                    <input type="email" id="contact-email" placeholder="Email" data-placeholder-es="Email" data-placeholder-en="Email" required>
-                </div>
-                <textarea id="contact-message" rows="4" placeholder="Mensaje" data-placeholder-es="Mensaje" data-placeholder-en="Message" required></textarea>
-                <button type="submit" class="btn btn-primary">
-                    <span data-es>Enviar Mensaje</span>
-                    <span data-en>Send Message</span>
-                </button>
-            </form>
-        </div>
+    <section id="projects" class="projects section-shell" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span data-es>Ideas llevadas a código</span><span data-en>Ideas turned into software</span></p><h2 id="projects-title"><span data-es>Proyectos propios y herramientas.</span><span data-en>Products and tools.</span></h2></div>
+        <a class="section-link" href="https://github.com/raulpadilladelgado" target="_blank" rel="noreferrer"><span data-es>Más en GitHub</span><span data-en>More on GitHub</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="project-grid">
+        <a class="project-card project-card-featured reveal" href="https://espaoil.com" target="_blank" rel="noreferrer">
+          <div class="project-card-head"><img src="images/espaoil.png" alt="" width="46" height="46"><span class="project-type"><span data-es>Producto propio</span><span data-en>Own product</span></span><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <h3>Espaoil</h3><p data-es>Encuentra gasolineras baratas cerca de ti. Una solución cotidiana centrada en la utilidad y una experiencia sencilla.</p><p data-en>Find cheap gas stations nearby. A solution for everyday use, focused on utility and a simple experience.</p><div class="tag-list"><span>Next.js</span><span>TypeScript</span><span data-es>Geolocalización</span><span data-en>Geolocation</span></div>
+        </a>
+        <a class="project-card project-card-featured reveal" href="https://lift-sage.vercel.app/" target="_blank" rel="noreferrer">
+          <div class="project-card-head"><img src="images/lift.png" alt="" width="46" height="46"><span class="project-type"><span data-es>Producto propio</span><span data-en>Own product</span></span><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <h3>Lift</h3><p data-es>Una app de entrenamiento para organizar rutinas y seguir el progreso, diseñada para registrar una sesión con rapidez y claridad.</p><p data-en>A workout app for organizing routines and tracking progress, designed to make logging a session quick and clear.</p><div class="tag-list"><span>React</span><span>Mobile first</span><span>Vercel</span></div>
+        </a>
+        <a class="project-card reveal" href="https://github.com/raulpadilladelgado/GitHub-repositories-cleaner" target="_blank" rel="noreferrer">
+          <div class="project-card-head"><img src="images/ghcleaner.png" alt="" width="46" height="46"><span class="project-type"><span data-es>Herramienta</span><span data-en>Tool</span></span><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <h3>GH Cleaner</h3><p data-es>Utilidad de Bash para limpiar repositorios de GitHub y resumir su contenido con ayuda de IA.</p><p data-en>A Bash utility to clean up GitHub repositories and summarize their contents with AI.</p><div class="tag-list"><span>Bash</span><span>AI</span><span>OpenAI</span></div>
+        </a>
+        <a class="project-card reveal" href="https://github.com/marketplace/actions/check-dependencies-in-pull-request" target="_blank" rel="noreferrer">
+          <div class="project-card-head"><img src="images/github-actions.png" alt="" width="46" height="46"><span class="project-type"><span data-es>Open source</span><span data-en>Open source</span></span><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <h3>GitHub Actions</h3><p data-es>Acción para comprobar dependencias en pull requests y automatizar revisiones de cambios.</p><p data-en>An action to check dependencies in pull requests and automate change reviews.</p><div class="tag-list"><span>GitHub Actions</span><span>CI/CD</span><span data-es>Automatización</span><span data-en>Automation</span></div>
+        </a>
+        <article class="project-card project-card-next reveal"><span class="next-mark" aria-hidden="true">+</span><span class="project-type"><span data-es>En construcción</span><span data-en>In progress</span></span><h3><span data-es>La siguiente idea</span><span data-en>The next idea</span></h3><p data-es>Siempre explorando nuevas formas de convertir problemas reales en productos útiles.</p><p data-en>Always exploring new ways to turn real problems into useful products.</p><span class="next-code">idea → product → feedback</span></article>
+      </div>
     </section>
-</main>
 
-<script>
-    function detectLanguage() {
-        const browserLang = navigator.language || navigator.userLanguage;
-        const lang = browserLang.startsWith('es') ? 'es' : 'en';
-        setLanguage(lang);
+    <section id="blog" class="blog section-shell" aria-labelledby="blog-title">
+      <div class="section-heading compact-heading">
+        <div><p class="eyebrow"><span data-es>Notas de oficio</span><span data-en>Notes from the craft</span></p><h2 id="blog-title"><span data-es>Ideas y aprendizajes.</span><span data-en>Ideas and learnings.</span></h2></div>
+        <a class="section-link" href="https://raulpadilladelgado.github.io/blog/" target="_blank" rel="noreferrer"><span data-es>Todas las publicaciones</span><span data-en>All posts</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="blog-grid">
+        <a href="https://leanmind.es/es/blog/testcontainers-para-ejecucion-local" class="blog-card reveal" target="_blank" rel="noreferrer"><span class="blog-index">01 / TESTING</span><h3 data-es>Testcontainers para ejecución local</h3><h3 data-en>Testcontainers for local execution</h3><p data-es>Optimización del entorno de pruebas.</p><p data-en>Optimizing the testing environment.</p><span class="blog-arrow">↗</span></a>
+        <a href="https://leanmind.es/es/blog/test-mas-legible-test-mas-comestible" class="blog-card reveal" target="_blank" rel="noreferrer"><span class="blog-index">02 / CRAFT</span><h3 data-es>Test más legible, más comestible</h3><h3 data-en>More readable, more edible tests</h3><p data-es>El arte de escribir tests comprensibles.</p><p data-en>The art of writing understandable tests.</p><span class="blog-arrow">↗</span></a>
+        <a href="https://leanmind.es/es/blog/la-personalidad-en-un-aprendiz" class="blog-card reveal" target="_blank" rel="noreferrer"><span class="blog-index">03 / GROWTH</span><h3 data-es>La personalidad en un aprendiz</h3><h3 data-en>Personality in an apprentice</h3><p data-es>Crecimiento y mentalidad técnica.</p><p data-en>Technical growth and mindset.</p><span class="blog-arrow">↗</span></a>
+        <a href="https://leanmind.es/es/blog/guia-para-modificar-codigo-legacy" class="blog-card reveal" target="_blank" rel="noreferrer"><span class="blog-index">04 / LEGACY</span><h3 data-es>Guía para modificar código legacy</h3><h3 data-en>Guide to modifying legacy code</h3><p data-es>Estrategias para abordar sistemas existentes.</p><p data-en>Strategies for working with existing systems.</p><span class="blog-arrow">↗</span></a>
+        <a href="https://www.linkedin.com/posts/raulpadilladelgado_desarrolloweb-inteligenciaartificial-softwaredevelopment-activity-7375471950988599296-HZ0M?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_C-EwBnDwr3Xd5rdfjueE2V1wWEZJ8Fl4" class="blog-card reveal" target="_blank" rel="noreferrer"><span class="blog-index">05 / AI</span><h3 data-es>No, la IA no va a hacer tu trabajo</h3><h3 data-en>No, AI won't take your job</h3><p data-es>Una reflexión sobre IA y calidad de desarrollo.</p><p data-en>A reflection on AI and software quality.</p><span class="blog-arrow">↗</span></a>
+        <a href="https://www.linkedin.com/posts/raulpadilladelgado_desarrollodesoftware-pragmatismo-softwarecraftsmanship-activity-7377990480506200064-EeuV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_C-EwBnDwr3Xd5rdfjueE2V1wWEZJ8Fl4" class="blog-card reveal" target="_blank" rel="noreferrer"><span class="blog-index">06 / LEARNING</span><h3 data-es>Tu pasión por aprender podría ser tu peor enemigo</h3><h3 data-en>Your passion for learning could be your worst enemy</h3><p data-es>Los riesgos de aprender sin un propósito claro.</p><p data-en>The risks of learning without a clear purpose.</p><span class="blog-arrow">↗</span></a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section section-shell" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div class="contact-copy">
+          <p class="eyebrow"><span data-es>¿Empezamos?</span><span data-en>Let's start</span></p>
+          <h2 id="contact-title"><span data-es>Cuéntame qué tienes en mente.</span><span data-en>Tell me what you're thinking.</span></h2>
+          <p data-es>Una idea de producto, un proceso que mejorar o sistemas que deberían hablar entre sí. Cuéntame el reto y lo exploramos.</p>
+          <p data-en>A product idea, a process to improve, or systems that should work together. Tell me about the challenge and we'll explore it.</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/raulpadilladelgado" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></a>
+            <a href="https://github.com/raulpadilladelgado" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+            <a href="mailto:raul.padilla@leanmind.es" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label><span data-es>Nombre</span><span data-en>Name</span><input type="text" id="contact-name" autocomplete="name" required></label>
+            <label><span data-es>Email</span><span data-en>Email</span><input type="email" id="contact-email" autocomplete="email" required></label>
+          </div>
+          <label><span data-es>¿En qué estás pensando?</span><span data-en>What are you thinking about?</span><textarea id="contact-message" rows="5" required></textarea></label>
+          <button class="button button-primary" type="submit"><span data-es>Enviar mensaje</span><span data-en>Send message</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          <p class="form-note"><span data-es>Se abrirá tu aplicación de correo para enviar el mensaje.</span><span data-en>Your email app will open so you can send the message.</span></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <a class="brand footer-brand" href="#top"><img src="images/yo.png" alt="" width="30" height="30"><span>Raúl Padilla<span class="brand-period">.</span></span></a>
+    <p><span data-es>Hecho con criterio, pruebas y una cantidad razonable de café.</span><span data-en>Made with care, tests, and a reasonable amount of coffee.</span></p>
+    <span class="footer-code">© <span id="current-year"></span> · <span data-es>Software con intención</span><span data-en>Software with intent</span></span>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const languageToggle = document.getElementById('lang-toggle');
+    const menuToggle = document.getElementById('menu-toggle');
+    const siteNav = document.getElementById('site-nav');
+
+    function setLanguage(language) {
+      root.lang = language;
+      languageToggle.setAttribute('aria-label', language === 'es' ? 'Cambiar idioma a inglés' : 'Switch language to Spanish');
+      try { localStorage.setItem('portfolio-language', language); } catch (_) {}
     }
 
-    function setLanguage(lang) {
-        document.documentElement.setAttribute('lang', lang);
-        document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
-            el.placeholder = el.getAttribute('data-placeholder-' + lang);
+    let savedLanguage = null;
+    try { savedLanguage = localStorage.getItem('portfolio-language'); } catch (_) {}
+    const initialLanguage = savedLanguage || ((navigator.language || 'es').toLowerCase().startsWith('es') ? 'es' : 'en');
+    setLanguage(initialLanguage);
+
+    languageToggle.addEventListener('click', function () {
+      setLanguage(root.lang === 'es' ? 'en' : 'es');
+    });
+
+    function closeMenu() {
+      siteNav.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', root.lang === 'es' ? 'Abrir menú' : 'Open menu');
+    }
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', !isOpen ? (root.lang === 'es' ? 'Cerrar menú' : 'Close menu') : (root.lang === 'es' ? 'Abrir menú' : 'Open menu'));
+      siteNav.classList.toggle('is-open', !isOpen);
+    });
+    siteNav.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', closeMenu); });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+      const subject = 'Contacto Web: ' + name;
+      const body = 'Nombre: ' + name + '\nEmail: ' + email + '\n\nMensaje:\n' + message;
+      window.location.href = 'mailto:raul.padilla@leanmind.es?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      root.classList.add('js-ready');
+      const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
         });
+      }, { threshold: 0.14 });
+      revealItems.forEach(function (item) { revealObserver.observe(item); });
     }
 
-    function toggleLanguage() {
-        const currentLang = document.documentElement.getAttribute('lang');
-        setLanguage(currentLang === 'es' ? 'en' : 'es');
+    const heroVisual = document.getElementById('hero-visual');
+    const heroPortrait = heroVisual.querySelector('.hero-portrait');
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const trailSymbols = ['{}', 'test()', '✓', 'await', 'refactor()'];
+    let lastTrailTime = 0;
+    let trailIndex = 0;
+
+    if (finePointer.matches && !reducedMotion.matches) {
+      heroVisual.addEventListener('pointermove', function (event) {
+        const bounds = heroVisual.getBoundingClientRect();
+        const x = event.clientX - bounds.left;
+        const y = event.clientY - bounds.top;
+        heroPortrait.style.setProperty('--cursor-x', x + 'px');
+        heroPortrait.style.setProperty('--cursor-y', y + 'px');
+        heroPortrait.classList.add('is-revealing');
+
+        const now = performance.now();
+        if (now - lastTrailTime > 95) {
+          lastTrailTime = now;
+          const particle = document.createElement('span');
+          particle.className = 'code-particle';
+          particle.textContent = trailSymbols[trailIndex % trailSymbols.length];
+          trailIndex += 1;
+          particle.style.left = (x + (Math.random() * 26 - 13)) + 'px';
+          particle.style.top = (y + (Math.random() * 26 - 13)) + 'px';
+          heroVisual.appendChild(particle);
+          window.setTimeout(function () { particle.remove(); }, 850);
+        }
+      });
+
+      heroVisual.addEventListener('pointerleave', function () {
+        heroPortrait.classList.remove('is-revealing');
+      });
     }
-
-    function handleContact(event) {
-        event.preventDefault();
-        const name = document.getElementById('contact-name').value;
-        const email = document.getElementById('contact-email').value;
-        const message = document.getElementById('contact-message').value;
-        const subject = `Contacto Web: ${name}`;
-        const body = `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`;
-        window.location.href = `mailto:raul.padilla@leanmind.es?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
-
-    document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
-
-    detectLanguage();
-</script>
-
+  </script>
 </body>
 </html>
