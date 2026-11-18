@@ -241,6 +241,7 @@ a.project-card:hover { transform: translateY(-5px); border-color: #b8caff; box-s
 .project-card-featured { background: linear-gradient(145deg, #fffefa 55%, #edf2ff); }
 .project-card-head { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; }
 .project-card-head img { width: 43px; height: 43px; object-fit: contain; border-radius: 11px; }
+.toolify-mark { display: grid; place-items: center; flex: 0 0 43px; width: 43px; height: 43px; border: 1px solid #c9d5f5; border-radius: 11px; color: var(--blue); background: var(--blue-soft); font: 700 18px var(--mono); }
 .project-type { color: var(--blue); font: 500 8px var(--mono); text-transform: uppercase; letter-spacing: .04em; }
 .project-arrow { margin-left: auto; color: #8e96a5; font-size: 17px; }
 .project-card h3 { margin: 0 0 8px; font-size: 19px; letter-spacing: -.04em; }
@@ -248,6 +249,9 @@ a.project-card:hover { transform: translateY(-5px); border-color: #b8caff; box-s
 .project-card .tag-list { margin-top: auto; }
 .project-card .tag-list > span { font-size: 8px; padding: 4px 7px; }
 .project-card-next { justify-content: center; min-height: 260px; border-style: dashed; background: transparent; }
+.project-card-archive { border-style: dashed; background: rgba(255,254,250,.5); }
+.project-card-archive .project-type { color: #747c8c; }
+.project-card-archive:hover { background: var(--paper); }
 .next-mark { display: grid; place-items: center; width: 39px; height: 39px; margin-bottom: 18px; border: 1px solid #c6d3f2; border-radius: 12px; color: var(--blue); background: #fff; font-size: 23px; }
 .project-card-next h3 { margin-top: 10px; }
 .project-card-next p { max-width: 250px; }
