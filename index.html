@@ -50,7 +50,7 @@
         <div class="portrait-edge">
           <img class="hero-portrait" src="images/yo1.jpeg" alt="" fetchpriority="high">
         </div>
-        <span class="visual-caption"><span class="caption-dot"></span><span data-es>arrastra para explorar</span><span data-en>drag to explore</span></span>
+        <span class="visual-caption"><span class="caption-dot"></span><span data-es>cursor · dedo</span><span data-en>pointer · finger</span></span>
       </div>
 
       <div class="hero-copy">
@@ -391,6 +391,19 @@
       heroVisual.addEventListener('pointercancel', function () {
         heroPortrait.classList.remove('is-revealing');
       });
+
+      function updateFromTouch(event) {
+        const touch = event.touches && event.touches[0];
+        if (touch) updatePortraitReveal(touch);
+      }
+      heroVisual.addEventListener('touchstart', updateFromTouch, { passive: true });
+      heroVisual.addEventListener('touchmove', updateFromTouch, { passive: true });
+      heroVisual.addEventListener('touchend', function () {
+        heroPortrait.classList.remove('is-revealing');
+      }, { passive: true });
+      heroVisual.addEventListener('touchcancel', function () {
+        heroPortrait.classList.remove('is-revealing');
+      }, { passive: true });
     }
   </script>
 </body>
